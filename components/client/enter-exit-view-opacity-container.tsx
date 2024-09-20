@@ -1,6 +1,7 @@
 "use client"
 
-import { motion, useAnimation, useInView } from 'framer-motion';
+// import { motion, useAnimation, useInView } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
 interface EnterExitViewOpacityContainerProps {
@@ -11,7 +12,7 @@ interface EnterExitViewOpacityContainerProps {
 export const EnterExitViewOpacityContainer: React.FC<EnterExitViewOpacityContainerProps> = ({ children, className }) => {
   const ref = useRef(null);
   const controls = useAnimation();
-  const isInView = useInView(ref, { amount: "some" }); // 'some' means partial visibility
+  // const isInView = useInView(ref, { amount: "some" }); // 'some' means partial visibility
 
   useEffect(() => {
     const handleScroll = () => {
