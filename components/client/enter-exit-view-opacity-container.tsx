@@ -52,7 +52,7 @@ export const EnterExitViewOpacityContainer: React.FC<EnterExitViewOpacityContain
     <motion.div
       ref={ref}
       animate={controls}
-      className={`h-screen transition-opacity duration-1000 ease-in-out ${className}`}
+      className={`h-screen transition-opacity duration-200 ease-in-out ${className}`}
     >
       {children}
     </motion.div>

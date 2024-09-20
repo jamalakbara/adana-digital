@@ -23,18 +23,18 @@ export function NavbarDesktop({ className }: { className?: string }) {
   }, [y])
 
   return (
-    <header id="NavbarDesktop" className={`sticky top-0 bg-transparent z-50 hidden lg:${visible ? "block" : "hidden"} ${className}`}>
+    <header id="NavbarDesktop" className={`sticky top-0 bg-transparent z-50 hidden lg:block ${className} transition-all ease-in-out duration-200`} style={{ opacity: visible ? 1 : 0 }}>
       <div className="absolute top-10 right-20 transition-all ease-in-out z-1000">
-        {toggleNav ? (
-          <div className="flex flex-row gap-5 align-middle">
-            <div className="flex flex-row gap-5 align-middle translate-y-2">
-              {pages.map((page) => (<Link className="font-semibold transition-all ease-in-out hover:opacity-50" key={page.url} href={page.url}>{page.title}</Link>))}
-            </div>
-            <X className="h-10 w-10 cursor-pointer transition-all ease-in-out hover:opacity-50" onClick={() => setToggleNav(false)} />
+        <div className="flex flex-row gap-5 align-middle">
+          <div
+            className="flex flex-row gap-5 align-middle transition-all ease-in-out"
+            style={{ transform: `translateY(.5rem) translateX(${toggleNav ? 3 : 9}rem) scale(${toggleNav ? 1 : 0})`}}
+          >
+            {pages.map((page) => (<Link className="font-semibold transition-all ease-in-out hover:opacity-50" key={page.url} href={page.url}>{page.title}</Link>))}
           </div>
-        ) : (
-          <Menu className="h-10 w-10 cursor-pointer transition-all ease-in-out hover:opacity-50" onClick={() => setToggleNav(true)} />
-        )}
+          <X className="h-10 w-10 cursor-pointer transition-all ease-in-out hover:opacity-50" style={{ transform: `translateX(3.9rem) scale(${toggleNav ? 1 : 0})` }} onClick={() => setToggleNav(false)} />
+          <Menu className="h-10 w-10 cursor-pointer transition-all ease-in-out hover:opacity-50" style={{ transform: `scale(${toggleNav ? 0 : 1})`}} onClick={() => setToggleNav(true)} />
+        </div>
       </div>
       <div className="flex flex-row align-middle justify-center">
         <Image

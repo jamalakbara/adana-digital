@@ -1,11 +1,12 @@
 // import Image from "next/image";
-import { MoveDown } from "lucide-react";
 import MotionWrapper from "@/components/client/motion-wrapper";
-import { EnterExitViewOpacityContainer } from "@/components/client/enter-exit-view-opacity-container";
 import { NavbarMobile } from "@/components/client/navbar-mobile";
 import { services } from "@/lib/data";
 import { ServiceCard } from "@/components/client/service-card";
 import { Card } from "@/components/ui/card";
+import InViewWrapper from "@/components/client/in-view-wrapper";
+import { MoveDownArrow } from "@/components/client/move-down-arrow";
+import { LetsDiscussText } from "@/components/client/lets-discuss-text";
 
 export default function Home() {
   return (
@@ -22,23 +23,29 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <EnterExitViewOpacityContainer className="bg-[#D9D9D9] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
-      <div className="lg:absolute lg:top-[50%] lg:left-20 text-4xl">
-        Collaborative Growth<br />Through Impactful Digital Strategies
-      </div>
-      <div className="lg:absolute lg:bottom-20 lg:right-20 text-2xl">
-        Let&apos;s Discuss
-      </div>
-      <div className="flex flex-row align-middle justify-center lg:absolute lg:bottom-20 left-20">
-        <MoveDown className="h-10 w-8"/>
-      </div>
-    </EnterExitViewOpacityContainer>
+    <section className="bg-[#D9D9D9] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
+      <InViewWrapper>
+        <div className="lg:absolute lg:top-[50%] lg:left-20 text-4xl">
+          Collaborative Growth<br />Through Impactful Digital Strategies
+        </div>
+      </InViewWrapper>
+      <InViewWrapper>
+        <div className="lg:absolute lg:bottom-20 lg:right-20 text-2xl">
+          <LetsDiscussText />
+        </div>
+      </InViewWrapper>
+      <InViewWrapper>
+        <div className="flex flex-row align-middle justify-center lg:absolute lg:bottom-20 left-20">
+          <MoveDownArrow />
+        </div>
+      </InViewWrapper>
+    </section>
   )
 }
 
 function WhySection() {
   return (
-    <EnterExitViewOpacityContainer className="bg-[#D9D9D9] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
+    <section className="bg-[#D9D9D9] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
       <div className="flex flex-col lg:flex-row mt-10 lg:mx-20">
         <div className="flex-grow w-[300px] mx-auto lg:mx-0 lg:w-auto">
           <div className="flex flex-col lg:mx-20">
@@ -72,17 +79,19 @@ function WhySection() {
           </div>
         </div>
       </div>
-    </EnterExitViewOpacityContainer>
+    </section>
   )
 }
 
 function ServicesSection() {
   return (
-    <EnterExitViewOpacityContainer className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row justify-center align-middle text-center relative lg:text-left">
+    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row justify-center align-middle text-center relative lg:text-left">
       <div className="lg:w-[60%] flex flex-col align-middle justify-center">
-        <h2 className="text-2xl font-bold mt-5 p-8 lg:mt-0">
-          Evolving Together to utilize Innovative Digital Solutions to Develop Your Brand.
-        </h2>
+        <InViewWrapper>
+          <h2 className="text-2xl font-bold mt-5 p-8 lg:mt-0">
+            Evolving Together to utilize Innovative Digital Solutions to Develop Your Brand.
+          </h2>
+        </InViewWrapper>
       </div>
       <div className="lg:w-[40%] flex flex-col align-middle justify-center">
         <div className="grow flex flex-col gap-2 align-middle justify-center mx-auto lg:mx-0">
@@ -97,13 +106,13 @@ function ServicesSection() {
           </Card>
         </div>
       </div>
-    </EnterExitViewOpacityContainer>
+    </section>
   )
 }
 
 function PerformanceMarketingSection() {
   return (
-    <EnterExitViewOpacityContainer className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left">
+    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left">
       <div className="lg:w-[50%] flex flex-col align-middle justify-evenly px-6 gap-4 lg:gap-0">
         <Card className="p-4">
           <p className="text-lg font-semibold text-[#5D93AD]">Performance Marketing</p>
@@ -119,13 +128,13 @@ function PerformanceMarketingSection() {
       <div className="lg:w-[50%] flex flex-col align-middle justify-center gap-4 lg:gap-0">
         <div className="flex flex-row align-middle justify-center">SAMPLE REPORT DIGITAL MARKETING IMG</div>
       </div>
-    </EnterExitViewOpacityContainer>
+    </section>
   )
 }
 
 function MarketplaceManagementSection() {
   return (
-    <EnterExitViewOpacityContainer className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left">
+    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left">
       <div className="lg:w-[50%] flex flex-col align-middle justify-evenly px-6 gap-4 lg:gap-0">
         <div className="flex flex-row align-middle justify-center">SAMPLE REPORT MARKETPLACE IMG</div>
       </div>
@@ -140,6 +149,6 @@ function MarketplaceManagementSection() {
           <p className="text-lg font-semibold text-[#5D93AD]">Marketplace program consultation</p>
         </Card>
       </div>
-    </EnterExitViewOpacityContainer>
+    </section>
   )
 }
