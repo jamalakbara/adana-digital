@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { MoveDown } from "lucide-react";
 import MotionWrapper from "@/components/client/motion-wrapper";
 import { EnterExitViewOpacityContainer } from "@/components/client/enter-exit-view-opacity-container";
