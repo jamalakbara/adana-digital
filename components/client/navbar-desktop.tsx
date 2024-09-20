@@ -30,7 +30,7 @@ export function NavbarDesktop({ className }: { className?: string }) {
             className="flex flex-row gap-5 align-middle transition-all ease-in-out"
             style={{ transform: `translateY(.5rem) translateX(${toggleNav ? 3 : 9}rem) scale(${toggleNav ? 1 : 0})`}}
           >
-            {pages.map((page) => (<Link className="font-semibold transition-all ease-in-out hover:opacity-50" key={page.url} href={page.url}>{page.title}</Link>))}
+            {pages.map((page) => (<Link className="font-semibold transition-all ease-in-out hover:opacity-50" key={page.url} href={page.url} scroll>{page.title}</Link>))}
           </div>
           <X
             className="h-10 w-10 cursor-pointer transition-all ease-in-out hover:opacity-50"

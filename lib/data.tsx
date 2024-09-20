@@ -1,11 +1,11 @@
 export const data = [];
 
 export const pages = [
-  { url: "/", title: "Home" },
-  { url: "/experties", title: "Expertise" },
-  { url: "/digital_partner", title: "Digital Partner" },
-  { url: "/portfolio", title: "Portfolio" },
-  { url: "/contact", title: "Contact" },
+  { url: "#Home", title: "Home" },
+  { url: "#Expertise", title: "Expertise" },
+  { url: "#DigitalPartner", title: "Digital Partner" },
+  { url: "#Portfolio", title: "Portfolio" },
+  { url: "#Contact", title: "Contact" },
 ];
 
 export const services = [

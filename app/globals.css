@@ -106,3 +106,7 @@ body {
     radial-gradient(var(--r) at left var(--r) bottom var(--_r)),
     conic-gradient(from -67.5deg at var(--_g) var(--_g),#000 45deg,#0000 0);
 }
+
+html {
+  scroll-behavior: smooth;
+}

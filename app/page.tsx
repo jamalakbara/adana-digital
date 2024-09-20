@@ -38,7 +38,7 @@ function HeroSection() {
     { h: 90, w: 90, t: 50, r: 0 },
   ];
   return (
-    <section className="bg-gradient-to-b from-[#EEFF01] via-[#D9D9D9] to-[#FFFFFF] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
+    <section id="Home" className="bg-gradient-to-b from-[#EEFF01] via-[#D9D9D9] to-[#FFFFFF] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
       {bgs.map((bg, i) => (
         <InViewWrapper key={i} duration={(i+1)*.35}>
           <div className="absolute bg-[#334E4D] blur-2xl invisible lg:visible" style={{ height: bg.h, width: bg.w, top: `${bg.t}%`, right: `${bg.r}%` }} />
@@ -133,7 +133,7 @@ function WhySection() {
 
 function ServicesSection() {
   return (
-    <section className="bg-gradient-to-b from-[#5D93AD] via-[#D9D9D9] to-[#FFFFFF] h-screen flex flex-col lg:flex-row justify-center align-middle text-center relative lg:text-left">
+    <section id="Expertise" className="bg-gradient-to-b from-[#5D93AD] via-[#D9D9D9] to-[#FFFFFF] h-screen flex flex-col lg:flex-row justify-center align-middle text-center relative lg:text-left">
       <div className="lg:w-[60%] flex flex-col align-middle justify-center">
         <InViewWrapper>
           <h2 className="text-2xl font-bold mt-5 p-8 lg:mt-0">
@@ -215,7 +215,7 @@ function DigitalCorporateTrainingSection() {
 
 function DigitalTechnologyPartnerSection() {
   return (
-    <section className="bg-[#D9D9D9] h-screen flex flex-col gap-4 align-middle justify-center mx-auto relative lg:text-left">
+    <section id="DigitalPartner" className="bg-[#D9D9D9] h-screen flex flex-col gap-4 align-middle justify-center mx-auto relative lg:text-left">
       <InViewWrapper>
         <div className="absolute top-6 left-6 font-bold text-[#527D38]">Adana Digital<br />2024</div>
       </InViewWrapper>
@@ -227,13 +227,13 @@ function DigitalTechnologyPartnerSection() {
 
 function SuccessStoryAndClientListSection() {
   return (
-    <section className="bg-[#FFFFFF] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left"></section>
+    <section id="Portfolio" className="bg-[#FFFFFF] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left"></section>
   )
 }
 
 function LeadsAndContactsSection() {
   return (
-    <section className="bg-gradient-to-b from-[#FFFFFF] via-[#527D38] to-[#527D38] h-screen flex flex-col gap-20 justify-center align-middle px-20 relative lg:text-left">
+    <section id="Contact" className="bg-gradient-to-b from-[#FFFFFF] via-[#527D38] to-[#527D38] h-screen flex flex-col gap-20 justify-center align-middle px-20 relative lg:text-left">
       <div className="text-white text-lg">Let&apos;s create a measurable impact towards your business</div>
       <div className="text-white font-semibold text-2xl">Start Your Journey Now</div>
       <div className="flex flex-row align-middle justify-around">
