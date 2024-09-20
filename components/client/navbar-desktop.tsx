@@ -3,15 +3,27 @@
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import logo_yellow_green from "@/public/assets/logo-yellow-green.svg"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { pages } from "@/lib/data"
 import Link from "next/link"
 
 export function NavbarDesktop({ className }: { className?: string }) {
   const [toggleNav, setToggleNav] = useState(false);
+  const [y, setY] = useState(0);
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    window.onscroll = () => {
+      setY(window.scrollY);
+    }
+    if (y >= 2*window.innerHeight) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+  }, [y])
 
   return (
-    <header id="NavbarDesktop" className={`sticky top-0 bg-transparent z-50 hidden lg:block ${className}`}>
+    <header id="NavbarDesktop" className={`sticky top-0 bg-transparent z-50 hidden lg:${visible ? "block" : "hidden"} ${className}`}>
       <div className="absolute top-10 right-20 transition-all ease-in-out z-1000">
         {toggleNav ? (
           <div className="flex flex-row gap-5 align-middle">

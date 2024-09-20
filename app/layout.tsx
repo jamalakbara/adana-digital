@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <NavbarDesktop className="hidden lg:block"/>
+        <NavbarDesktop className="hidden lg:block" />
         <main className="relative">
           {children}
         </main>
