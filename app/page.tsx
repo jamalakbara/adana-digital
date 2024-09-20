@@ -227,12 +227,20 @@ function DigitalTechnologyPartnerSection() {
 
 function SuccessStoryAndClientListSection() {
   return (
-    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left"></section>
+    <section className="bg-[#FFFFFF] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left"></section>
   )
 }
 
 function LeadsAndContactsSection() {
   return (
-    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left"></section>
+    <section className="bg-gradient-to-b from-[#FFFFFF] via-[#527D38] to-[#527D38] h-screen flex flex-col gap-20 justify-center align-middle px-20 relative lg:text-left">
+      <div className="text-white text-lg">Let&apos;s create a measurable impact towards your business</div>
+      <div className="text-white font-semibold text-2xl">Start Your Journey Now</div>
+      <div className="flex flex-row align-middle justify-around">
+        <div className="text-white">ADDRESS</div>
+        <div className="text-white">SOCIAL MEDIA</div>
+        <div className="text-white">EMAIL & PHONE</div>
+      </div>
+    </section>
   )
 }
