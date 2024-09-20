@@ -22,15 +22,29 @@ export default function Home() {
 }
 
 function HeroSection() {
+  const bgs = [
+    { h: 20, w: 20, t: 45, r: 60 },
+    { h: 30, w: 30, t: 40, r: 50 },
+    { h: 40, w: 40, t: 30, r: 40 },
+    { h: 50, w: 50, t: 25, r: 30 },
+    { h: 60, w: 60, t: 30, r: 20 },
+    { h: 80, w: 80, t: 40, r: 10 },
+    { h: 90, w: 90, t: 50, r: 0 },
+  ];
   return (
     <section className="bg-gradient-to-b from-[#EEFF01] via-[#D9D9D9] to-[#FFFFFF] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
-      <div className="h-[20px] w-[20px] absolute top-[45%] right-[60%] bg-[#334E4D] blur-2xl invisible lg:visible" />
+      {bgs.map((bg, i) => (
+        <InViewWrapper key={i} duration={(i+1)*.35}>
+          <div className="absolute bg-[#334E4D] blur-2xl invisible lg:visible" style={{ height: bg.h, width: bg.w, top: `${bg.t}%`, right: `${bg.r}%` }} />
+        </InViewWrapper>
+      ))}
+      {/* <div className="h-[20px] w-[20px] absolute top-[45%] right-[60%] bg-[#334E4D] blur-2xl invisible lg:visible" />
       <div className="h-[30px] w-[30px] absolute top-[40%] right-[50%] bg-[#334E4D] blur-2xl invisible lg:visible" />
       <div className="h-[40px] w-[40px] absolute top-[30%] right-[40%] bg-[#334E4D] blur-2xl invisible lg:visible" />
       <div className="h-[50px] w-[50px] absolute top-[25%] right-[30%] bg-[#334E4D] blur-2xl invisible lg:visible" />
       <div className="h-[60px] w-[60px] absolute top-[30%] right-[20%] bg-[#334E4D] blur-2xl invisible lg:visible" />
       <div className="h-[80px] w-[80px] absolute top-[40%] right-[10%] bg-[#334E4D] blur-2xl invisible lg:visible" />
-      <div className="h-[90px] w-[90px] absolute top-[50%] right-[00%] bg-[#334E4D] blur-2xl invisible lg:visible" />
+      <div className="h-[90px] w-[90px] absolute top-[50%] right-[00%] bg-[#334E4D] blur-2xl invisible lg:visible" /> */}
       <InViewWrapper>
         <div className="lg:absolute lg:top-[50%] lg:left-20 text-4xl">
           Collaborative Growth<br />Through Impactful Digital Strategies
@@ -51,15 +65,29 @@ function HeroSection() {
 }
 
 function WhySection() {
+  const bgs = [
+    { h: 20, w: 20, t: 35, r: 60 },
+    { h: 30, w: 30, t: 25, r: 50 },
+    { h: 40, w: 40, t: 30, r: 40 },
+    { h: 50, w: 50, t: 25, r: 30 },
+    { h: 60, w: 60, t: 30, r: 20 },
+    { h: 70, w: 70, t: 25, r: 10 },
+    { h: 80, w: 80, t: 30, r: 0 },
+  ];
   return (
     <section className="bg-gradient-to-b from-[#FFFFFF] via-[#D9D9D9] to-[#5D93AD] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
-      <div className="h-[20px] w-[20px] absolute top-[35%] right-[60%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
+      {bgs.map((bg, i) => (
+        <InViewWrapper key={i+1} duration={(i+1)*.25}>
+          <div className="absolute bg-[#EEFF01] blur-2xl invisible lg:visible" style={{ top: `${bg.t}%`, right: `${bg.r}%`, width: bg.w, height: bg.h }} />
+        </InViewWrapper>
+      ))}
+      {/* <div className="h-[20px] w-[20px] absolute top-[35%] right-[60%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
       <div className="h-[30px] w-[30px] absolute top-[25%] right-[50%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
       <div className="h-[40px] w-[40px] absolute top-[30%] right-[40%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
       <div className="h-[50px] w-[50px] absolute top-[25%] right-[30%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
       <div className="h-[60px] w-[60px] absolute top-[30%] right-[20%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
       <div className="h-[70px] w-[70px] absolute top-[25%] right-[10%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
-      <div className="h-[80px] w-[80px] absolute top-[30%] right-[00%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
+      <div className="h-[80px] w-[80px] absolute top-[30%] right-[00%] bg-[#EEFF01] blur-2xl invisible lg:visible" /> */}
       <div className="flex flex-col lg:flex-row mt-10 lg:mx-20">
         <div className="flex-grow w-[300px] mx-auto lg:mx-0 lg:w-auto">
           <div className="flex flex-col lg:mx-20">
