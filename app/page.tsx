@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import InViewWrapper from "@/components/client/in-view-wrapper";
 import { MoveDownArrow } from "@/components/client/move-down-arrow";
 import { LetsDiscussText } from "@/components/client/lets-discuss-text";
+import { PartnersCarousel } from "@/components/client/partners-carousel";
 
 export default function Home() {
   return (
@@ -17,6 +18,11 @@ export default function Home() {
       <ServicesSection />
       <PerformanceMarketingSection />
       <MarketplaceManagementSection />
+      <DigitalMediaBuyingSection />
+      <DigitalCorporateTrainingSection />
+      <DigitalTechnologyPartnerSection />
+      <SuccessStoryAndClientListSection />
+      <LeadsAndContactsSection />
     </MotionWrapper>
   )
 }
@@ -192,5 +198,41 @@ function MarketplaceManagementSection() {
         </Card>
       </div>
     </section>
+  )
+}
+
+function DigitalMediaBuyingSection() {
+  return (
+    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left"></section>
+  )
+}
+
+function DigitalCorporateTrainingSection() {
+  return (
+    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left"></section>
+  )
+}
+
+function DigitalTechnologyPartnerSection() {
+  return (
+    <section className="bg-[#D9D9D9] h-screen flex flex-col gap-4 align-middle justify-center mx-auto relative lg:text-left">
+      <InViewWrapper>
+        <div className="absolute top-6 left-6 font-bold text-[#527D38]">Adana Digital<br />2024</div>
+      </InViewWrapper>
+      <div className="text-3xl text-[#527D38] mx-auto">Our Digital Tools and Media Partners</div>
+      <PartnersCarousel className="mx-auto" />
+    </section>
+  )
+}
+
+function SuccessStoryAndClientListSection() {
+  return (
+    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left"></section>
+  )
+}
+
+function LeadsAndContactsSection() {
+  return (
+    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left"></section>
   )
 }
