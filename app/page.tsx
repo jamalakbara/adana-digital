@@ -23,7 +23,14 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section className="bg-[#D9D9D9] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
+    <section className="bg-gradient-to-b from-[#EEFF01] via-[#D9D9D9] to-[#FFFFFF] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
+      <div className="h-[20px] w-[20px] absolute top-[45%] right-[60%] bg-[#334E4D] blur-2xl invisible lg:visible" />
+      <div className="h-[30px] w-[30px] absolute top-[40%] right-[50%] bg-[#334E4D] blur-2xl invisible lg:visible" />
+      <div className="h-[40px] w-[40px] absolute top-[30%] right-[40%] bg-[#334E4D] blur-2xl invisible lg:visible" />
+      <div className="h-[50px] w-[50px] absolute top-[25%] right-[30%] bg-[#334E4D] blur-2xl invisible lg:visible" />
+      <div className="h-[60px] w-[60px] absolute top-[30%] right-[20%] bg-[#334E4D] blur-2xl invisible lg:visible" />
+      <div className="h-[80px] w-[80px] absolute top-[40%] right-[10%] bg-[#334E4D] blur-2xl invisible lg:visible" />
+      <div className="h-[90px] w-[90px] absolute top-[50%] right-[00%] bg-[#334E4D] blur-2xl invisible lg:visible" />
       <InViewWrapper>
         <div className="lg:absolute lg:top-[50%] lg:left-20 text-4xl">
           Collaborative Growth<br />Through Impactful Digital Strategies
@@ -45,7 +52,14 @@ function HeroSection() {
 
 function WhySection() {
   return (
-    <section className="bg-[#D9D9D9] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
+    <section className="bg-gradient-to-b from-[#FFFFFF] via-[#D9D9D9] to-[#5D93AD] h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
+      <div className="h-[20px] w-[20px] absolute top-[35%] right-[60%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
+      <div className="h-[30px] w-[30px] absolute top-[25%] right-[50%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
+      <div className="h-[40px] w-[40px] absolute top-[30%] right-[40%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
+      <div className="h-[50px] w-[50px] absolute top-[25%] right-[30%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
+      <div className="h-[60px] w-[60px] absolute top-[30%] right-[20%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
+      <div className="h-[70px] w-[70px] absolute top-[25%] right-[10%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
+      <div className="h-[80px] w-[80px] absolute top-[30%] right-[00%] bg-[#EEFF01] blur-2xl invisible lg:visible" />
       <div className="flex flex-col lg:flex-row mt-10 lg:mx-20">
         <div className="flex-grow w-[300px] mx-auto lg:mx-0 lg:w-auto">
           <div className="flex flex-col lg:mx-20">
@@ -70,10 +84,10 @@ function WhySection() {
         <div className="flex-grow flex flex-col justify-center">
           <div className="">
             <h2 className="text-2xl font-bold mt-5 lg:mt-0">Why Adana?</h2>
-            <div className="mt-5 font-semibold">
+            <div className="mt-5 font-semibold lg:w-fit lg:mx-0 w-[80%] mx-auto">
               <span className="text-[#527D38]">Adana Digital</span> focus to craft performance marketing strategy and digital media to achieve <span className="text-[#527D38]">measurable impact</span> in order to <span className="text-[#527D38]">accelerate business growth</span>
             </div>
-            <div className="mt-5 font-semibold">
+            <div className="mt-5 font-semibold lg:w-fit lg:mx-0 w-[80%] mx-auto">
               Recognizing that every <span className="text-[#527D38]">company is unique</span>, we aim to provide excellence strategies by taking a <span className="text-[#527D38]">customized approach</span> for each of our partner
             </div>
           </div>
@@ -85,7 +99,7 @@ function WhySection() {
 
 function ServicesSection() {
   return (
-    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row justify-center align-middle text-center relative lg:text-left">
+    <section className="bg-gradient-to-b from-[#5D93AD] via-[#D9D9D9] to-[#FFFFFF] h-screen flex flex-col lg:flex-row justify-center align-middle text-center relative lg:text-left">
       <div className="lg:w-[60%] flex flex-col align-middle justify-center">
         <InViewWrapper>
           <h2 className="text-2xl font-bold mt-5 p-8 lg:mt-0">
@@ -112,7 +126,7 @@ function ServicesSection() {
 
 function PerformanceMarketingSection() {
   return (
-    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left">
+    <section className="bg-gradient-to-b from-[#FFFFFF] to-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left">
       <div className="lg:w-[50%] flex flex-col align-middle justify-evenly px-6 gap-4 lg:gap-0">
         <Card className="p-4">
           <p className="text-lg font-semibold text-[#5D93AD]">Performance Marketing</p>

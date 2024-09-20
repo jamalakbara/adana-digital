@@ -1,6 +1,6 @@
 "use client"
 
-import { Menu } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import logo_yellow_green from "@/public/assets/logo-yellow-green.svg"
 import { Drawer, DrawerContent, DrawerHeader, DrawerTrigger } from "../ui/drawer"
@@ -18,11 +18,13 @@ export function NavbarMobile({ className }: { className?: string }) {
           <DrawerTrigger asChild>
             <Menu className="h-10 w-10 cursor-pointer" onClick={() => setToggleNav(true)} />
           </DrawerTrigger>
-          <DrawerContent className="h-screen w-screen bg-white" onClick={() => setToggleNav(false)}>
-            <DrawerHeader className="hidden"></DrawerHeader>
+          <DrawerContent className="h-screen w-screen bg-white">
+            <DrawerHeader className="relative">
+              <X className="absolute top-10 right-10 h-10 w-10 cursor-pointer transition-all ease-in-out hover:opacity-50" onClick={() => setToggleNav(false)} />
+            </DrawerHeader>
             <div className="h-[75vh] flex flex-col justify-center gap-8 m-5">
               {pages.map((page) => (
-                <Link className="text-xl font-semibold transition-all ease-in-out border-b-2 hover:opacity-50" key={page.url} href={page.url}>{page.title}</Link>
+                <Link className="text-xl font-semibold transition-all ease-in-out border-b-2 hover:opacity-50" key={page.url} href={page.url} onClick={() => setToggleNav(false)}>{page.title}</Link>
               ))}
             </div>
           </DrawerContent>
