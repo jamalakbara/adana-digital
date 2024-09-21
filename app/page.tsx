@@ -8,10 +8,13 @@ import InViewWrapper from "@/components/client/in-view-wrapper";
 import { MoveDownArrow } from "@/components/client/move-down-arrow";
 import { LetsDiscussText } from "@/components/client/lets-discuss-text";
 import { PartnersCarousel } from "@/components/client/partners-carousel";
+import Link from "next/link";
+import { NavbarDesktop } from "@/components/client/navbar-desktop";
 
 export default function Home() {
   return (
     <MotionWrapper className="relative">
+      <NavbarDesktop />
       <NavbarMobile className="absolute top-2 h-0"/>
       <HeroSection />
       <WhySection />
@@ -149,7 +152,7 @@ function ServicesSection() {
         </div>
         <div className="grow flex flex-col align-middle justify-center p-4">
           <Card className="flex flex-row p-4 justify-around cursor-pointer bg-[#5D93AD] text-white hover:bg-white hover:text-[#5D93AD] transition-all ease-in-out">
-            <div className="text-xl">GLADANA LOGO</div>
+            <Link className="text-xl" href="/gladana">GLADANA LOGO</Link>
             <div className="font-semibold text-xl">Creative Solution</div>
           </Card>
         </div>
