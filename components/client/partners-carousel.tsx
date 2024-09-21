@@ -29,7 +29,7 @@ export const PartnersCarousel = ({ className }: { className?: string }) => {
   }, []);
 
   return (
-    <Carousel className={`w-full max-w-3xl ${className}`}>
+    <Carousel className={`w-full max-w-3xl relative ${className}`}>
       <CarouselContent>
         {categories.map((cat, i) => (
           <CarouselItem key={i} className="">
@@ -48,8 +48,8 @@ export const PartnersCarousel = ({ className }: { className?: string }) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="translate-y-[0px]" />
-      <CarouselNext className="translate-y-[0px]" />
+      <CarouselPrevious className="absolute top-[10%] lg:top-[50%] left-[30%] lg:left-[-10%]" />
+      <CarouselNext className="absolute top-[10%] lg:top-[50%] right-[30%] lg:right-[-10%]" />
     </Carousel>
   )
 }

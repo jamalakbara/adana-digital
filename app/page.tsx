@@ -219,15 +219,39 @@ function DigitalTechnologyPartnerSection() {
       <InViewWrapper>
         <div className="absolute top-6 left-6 font-bold text-[#527D38]">Adana Digital<br />2024</div>
       </InViewWrapper>
-      <div className="text-3xl text-[#527D38] mx-auto">Our Digital Tools and Media Partners</div>
+      <div className="text-3xl text-[#527D38] text-center lg:text-left lg:px-20">Our Digital Tools and Media Partners</div>
       <PartnersCarousel className="mx-auto" />
     </section>
   )
 }
 
 function SuccessStoryAndClientListSection() {
+  const brands = ["at Mauv", "Malo Home", "Buttonscarves", "Malo Toys", "Berlynn", "Noor Abika", "Cloxvox", "Mava Kabar", "Gurih7", "Mom Uung", "homeground", "Smells Good", "Legato Gelato", "Tangerine Marche", "Figlio Apparel", "Torgana"];
   return (
-    <section id="Portfolio" className="bg-[#FFFFFF] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left"></section>
+    <section id="Portfolio" className="bg-[#FFFFFF] h-screen flex flex-col gap-4 lg:gap-10 justify-center align-middle text-center relative lg:text-left">
+      <InViewWrapper>
+        <div className="text-3xl text-[#527D38] text-center lg:text-left mx-5 lg:mx-20">We Collaborate Remarkably With Incredible Brands</div>
+      </InViewWrapper>
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 align-middle justify-center">
+        <div className="grow lg:grow-[4] mx-auto lg:ml-20 lg:mr-4 p-4 grid grid-cols-2 rounded-md bg-[#5D93AD] h-fit lg:overflow-y-hidden lg:h-[50vh]">
+          {brands.map((b, i) => (
+            <div key={i} className="text-white italic">{b}</div>
+          ))}
+        </div>
+        <div className="grow lg:grow-[6] flex flex-col gap-8 lg:ml-4 lg:mr-20 h-[25vh] lg:h-[50vh] overflow-y-scroll p-5 lg:p-0">
+          {brands.map((b, i) => (
+            <Card key={i} className="flex flex-col lg:flex-row align-middle justify-evenly">
+              <div className="flex flex-col gap-2">
+                <h4 className="font-semibold">{b}</h4>
+                <div className="block lg:hidden">Service yang dipakai</div>
+                <p className="">Description of work</p>
+              </div>
+              <div className="hidden lg:block">Service yang dipakai</div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -236,7 +260,7 @@ function LeadsAndContactsSection() {
     <section id="Contact" className="bg-gradient-to-b from-[#FFFFFF] via-[#527D38] to-[#527D38] h-screen flex flex-col gap-20 justify-center align-middle px-20 relative lg:text-left">
       <div className="text-white text-lg">Let&apos;s create a measurable impact towards your business</div>
       <div className="text-white font-semibold text-2xl">Start Your Journey Now</div>
-      <div className="flex flex-row align-middle justify-around">
+      <div className="flex flex-col lg:flex-row align-middle justify-around">
         <div className="text-white">ADDRESS</div>
         <div className="text-white">SOCIAL MEDIA</div>
         <div className="text-white">EMAIL & PHONE</div>
