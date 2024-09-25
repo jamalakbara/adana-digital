@@ -10,6 +10,7 @@ import logo_plabs from "@/public/assets/logo-plabs.png";
 import logo_glos from "@/public/assets/logo-glos.png";
 import logo_amok from "@/public/assets/logo-amok.png";
 import Image from 'next/image';
+import useIsMobile from '@/hooks/useIsMobile';
 
 // social platform
 
@@ -22,6 +23,8 @@ import Image from 'next/image';
 // email marketing partner
 
 export const PartnersCarousel = ({ className }: { className?: string }) => {
+  const { isMobile } = useIsMobile();
+
   const categories = useMemo(() => {
     return [
       {
@@ -51,7 +54,7 @@ export const PartnersCarousel = ({ className }: { className?: string }) => {
     ];
   }, []);
 
-  return (
+  if (isMobile) return (
     <Carousel
       className={`w-full max-w-3xl relative ${className}`}
       plugins={[
@@ -81,5 +84,25 @@ export const PartnersCarousel = ({ className }: { className?: string }) => {
       {/* <CarouselPrevious className="absolute top-[10%] lg:top-[50%] left-[30%] lg:left-[-10%]" />
       <CarouselNext className="absolute top-[10%] lg:top-[50%] right-[30%] lg:right-[-10%]" /> */}
     </Carousel>
+  )
+
+  return (
+    <div className="grid grid-cols-2 gap-4">
+      {categories.map((cat, i) => (
+        <div
+          key={i+1}
+          className="flex flex-col justify-center gap-2"
+        >
+          <h3 className="underline underline-offset-2 text-[#527D38] my-6 text-center">{cat.title}</h3>
+          <div className="flex flex-row gap-2 flex-wrap justify-center">
+            {cat.items.map((item, j) => (
+              <div key={`${i}.${j}`} className="">
+                <Image src={item} alt="" width={150} />
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
   )
 }

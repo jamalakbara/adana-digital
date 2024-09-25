@@ -1,17 +1,17 @@
 export const data = [];
 
 export const pages = [
-  { url: "#Home", title: "Home" },
-  { url: "#Expertise", title: "Expertise" },
-  { url: "#DigitalPartner", title: "Digital Partner" },
-  { url: "#Portfolio", title: "Portfolio" },
-  { url: "#Contact", title: "Contact" },
+  { url: "#HeroSection", title: "Home" },
+  { url: "#ServicesSection", title: "Expertise" },
+  { url: "#DigitalTechnologyPartnerSection", title: "Digital Partner" },
+  { url: "#SuccessStoryAndClientListSection", title: "Portfolio" },
+  { url: "#LeadsAndContactsSection", title: "Contact" },
 ];
 
 export const services = [
-  { title: "Performance Marketing" },
-  { title: "Digital Media Buying" },
-  { title: "Marketplace Management" },
-  { title: "Digital Corporate Training" },
-  { title: "Creative Solution" },
+  { url: "#PerformanceMarketingSection", title: "Performance Marketing" },
+  { url: "#DigitalMediaBuyingSection", title: "Digital Media Buying" },
+  { url: "#MarketplaceManagementSection", title: "Marketplace Management" },
+  { url: "#DigitalCorporateTrainingSection", title: "Digital Corporate Training" },
+  { url: "/gladana", title: "Creative Solution" },
 ];
