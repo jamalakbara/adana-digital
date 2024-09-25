@@ -103,9 +103,14 @@ function ServicesSection() {
         </InViewWrapper>
       </div>
       <div className="lg:w-[40%] flex flex-col align-middle justify-center mt-3 lg:mt-0">
-        <div className="grow flex flex-col gap-2 align-middle justify-center mx-auto lg:mx-0">
+        <div className="hidden grow lg:flex flex-col gap-2 align-middle justify-center mx-auto lg:mx-0">
           {services.map((service, index) => (
-            <ServiceCard key={`${index+1}`} title={service.title} className="w-[200px] lg:w-[300px] p-0 lg:p-2" style={{ marginLeft: `${index*20}px`}}/>
+            <ServiceCard key={`${index+1}`} title={service.title} className="w-[200px] lg:w-[300px] p-2" style={{ marginLeft: `${index*20}px`}} />
+          ))}
+        </div>
+        <div className="grow lg:hidden flex flex-col gap-2 align-middle justify-center mx-auto lg:mx-0">
+          {services.map((service, index) => (
+            <ServiceCard key={`${index+1}`} title={service.title} className="w-[200px] lg:w-[300px] p-2 text-sm" />
           ))}
         </div>
         <div className="grow flex flex-col align-middle justify-center p-4">
@@ -252,7 +257,7 @@ function LeadsAndContactsSection() {
     <section id="Contact" className="bg-artboard9 bg-cover h-screen flex flex-col gap-20 justify-center align-middle px-20 relative lg:text-left">
       <div className="text-white text-lg">Let&apos;s create a measurable impact towards your business</div>
       <div className="text-white font-semibold text-2xl underline underline-offset-2">Start Your Journey Now</div>
-      <div className="flex flex-col lg:flex-row align-middle justify-between lg:justify-around">
+      <div className="flex flex-col lg:flex-row align-middle gap-6 lg:gap-0 lg:justify-around">
         <div className="text-white">
           Jl. Pasir Luyu No. 33 (40254)<br />
           Regol, Kelurahan Pasirluyu, Kota Bandung<br />

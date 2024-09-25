@@ -5,6 +5,6 @@ import React from 'react'
 
 export const MoveDownArrow = ({ className }: { className?: string }) => {
   return (
-    <MoveDown className={`h-10 w-8 cursor-pointer transition-all ease-in-out hover:text-[#5D93AD] ${className}`} onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}/>
+    <MoveDown className={`h-10 w-8 cursor-pointer transition-all ease-in-out hover:text-[#EEFF01] ${className}`} onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}/>
   )
 }
