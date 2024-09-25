@@ -77,11 +77,11 @@ function WhySection() {
         </div>
         <div className="flex-grow flex flex-col justify-center">
           <div className="">
-            <h2 className="text-2xl font-bold mt-5 lg:mt-0">Why Adana?</h2>
-            <div className="mt-5 font-semibold lg:w-fit lg:mx-0 w-[80%] mx-auto">
+            <h2 className="text-2xl lg:text-4xl font-bold mt-5 lg:mt-0">Why Adana?</h2>
+            <div className="text-md lg: text-xl mt-5 font-semibold lg:w-fit lg:mx-0 w-[80%] mx-auto">
               <span className="text-[#527D38]">Adana Digital</span> focus to craft performance marketing strategy and digital media to achieve <span className="text-[#527D38]">measurable impact</span> in order to <span className="text-[#527D38]">accelerate business growth</span>
             </div>
-            <div className="mt-5 font-semibold lg:w-fit lg:mx-0 w-[80%] mx-auto">
+            <div className="text-md lg:text-xl mt-5 font-semibold lg:w-fit lg:mx-0 w-[80%] mx-auto">
               Recognizing that every <span className="text-[#527D38]">company is unique</span>, we aim to provide excellence strategies by taking a <span className="text-[#527D38]">customized approach</span> for each of our partner
             </div>
           </div>
