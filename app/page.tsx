@@ -126,17 +126,19 @@ function ServicesSection() {
 
 function PerformanceMarketingSection() {
   return (
-    <section className="bg-gradient-to-b from-[#FFFFFF] to-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left">
-      <div className="lg:w-[50%] flex flex-col align-middle justify-evenly px-6 gap-4 lg:gap-0">
-        <Card className="p-4">
-          <p className="text-lg font-semibold text-[#5D93AD]">Performance Marketing</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Strategize for effectiveness and optimize for optimum impact</p>
+    <section className="bg-white h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left py-20 px-10">
+      <div className="lg:w-[50%] flex flex-col align-middle justify-center px-6 gap-4 lg:gap-4">
+        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
+          <h2 className="text-lg font-semibold text-black">Performance Marketing</h2>
+          <div>
+            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
+          </div>
         </Card>
-        <Card className="p-4">
-          <p className="text-lg font-semibold text-[#5D93AD]">Digital Advertising Solution</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Data driven marketing analysis</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Business growth consultation</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Email marketing</p>
+        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
+          <h2 className="text-lg font-semibold text-black">Digital Advertising Solution</h2>
+          <div>
+            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
+          </div>
         </Card>
       </div>
       <div className="lg:w-[50%] flex flex-col align-middle justify-center gap-4 lg:gap-0">
@@ -148,20 +150,23 @@ function PerformanceMarketingSection() {
 
 function MarketplaceManagementSection() {
   return (
-    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left">
-      <div className="lg:w-[50%] flex flex-col align-middle justify-evenly px-6 gap-4 lg:gap-0">
-        <div className="flex flex-row align-middle justify-center">SAMPLE REPORT MARKETPLACE IMG</div>
+    <section className="bg-white h-screen flex flex-col lg:flex-row-reverse gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left py-20 px-10">
+      <div className="lg:w-[50%] flex flex-col align-middle justify-center px-6 gap-4 lg:gap-4">
+        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
+          <h2 className="text-lg font-semibold text-black">Performance Marketing</h2>
+          <div>
+            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
+          </div>
+        </Card>
+        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
+          <h2 className="text-lg font-semibold text-black">Digital Advertising Solution</h2>
+          <div>
+            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
+          </div>
+        </Card>
       </div>
-      <div className="lg:w-[50%] flex flex-col align-middle justify-evenly px-6 gap-4 lg:gap-0">
-        <Card className="p-4">
-          <p className="text-lg font-semibold text-[#5D93AD]">Marketplace Management</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Managing end to end business and marketing strategy for marketplace</p>
-        </Card>
-        <Card className="p-4">
-          <p className="text-lg font-semibold text-[#5D93AD]">Affiliate marketing</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Marketplace SEO</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Marketplace program consultation</p>
-        </Card>
+      <div className="lg:w-[50%] flex flex-col align-middle justify-center gap-4 lg:gap-0">
+        <div className="flex flex-row align-middle justify-center">SAMPLE REPORT DIGITAL MARKETING IMG</div>
       </div>
     </section>
   )
@@ -169,21 +174,23 @@ function MarketplaceManagementSection() {
 
 function DigitalMediaBuyingSection() {
   return (
-    <section className="bg-gradient-to-b from-[#FFFFFF] to-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left">
-      <div className="lg:w-[50%] flex flex-col align-middle justify-evenly px-6 gap-4 lg:gap-0">
-        <Card className="p-4">
-          <p className="text-lg font-semibold text-[#5D93AD]">Digital Media Buying</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Resonates Your Brand Through Digital Media Buying</p>
+    <section className="bg-white h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left py-20 px-10">
+      <div className="lg:w-[50%] flex flex-col align-middle justify-center px-6 gap-4 lg:gap-4">
+        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
+          <h2 className="text-lg font-semibold text-black">Performance Marketing</h2>
+          <div>
+            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
+          </div>
         </Card>
-        <Card className="p-4">
-          <p className="text-lg font-semibold text-[#5D93AD]">OTT and OLV Media Placement</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Digital Media Advertorials</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Mobile Push Notifications</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Digital OOH</p>
+        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
+          <h2 className="text-lg font-semibold text-black">Digital Advertising Solution</h2>
+          <div>
+            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
+          </div>
         </Card>
       </div>
       <div className="lg:w-[50%] flex flex-col align-middle justify-center gap-4 lg:gap-0">
-        <div className="flex flex-row align-middle justify-center">SAMPLE MEDIA PLACEMENT IMG</div>
+        <div className="flex flex-row align-middle justify-center">SAMPLE REPORT DIGITAL MARKETING IMG</div>
       </div>
     </section>
   )
@@ -191,20 +198,23 @@ function DigitalMediaBuyingSection() {
 
 function DigitalCorporateTrainingSection() {
   return (
-    <section className="bg-[#D9D9D9] h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left">
-      <div className="lg:w-[50%] flex flex-col align-middle justify-evenly px-6 gap-4 lg:gap-0">
-        <div className="flex flex-row align-middle justify-center">SAMPLE REPORT DIGITAL MARKETING CLASS IMG</div>
+    <section className="bg-white h-screen flex flex-col lg:flex-row-reverse gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left py-20 px-10">
+      <div className="lg:w-[50%] flex flex-col align-middle justify-center px-6 gap-4 lg:gap-4">
+        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
+          <h2 className="text-lg font-semibold text-black">Performance Marketing</h2>
+          <div>
+            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
+          </div>
+        </Card>
+        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
+          <h2 className="text-lg font-semibold text-black">Digital Advertising Solution</h2>
+          <div>
+            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
+          </div>
+        </Card>
       </div>
-      <div className="lg:w-[50%] flex flex-col align-middle justify-evenly px-6 gap-4 lg:gap-0">
-        <Card className="p-4">
-          <p className="text-lg font-semibold text-[#5D93AD]">Digital Marketing Corporate Training</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Accelerate digital knowledge to maximize digital presence or digital business penetration</p>
-        </Card>
-        <Card className="p-4">
-          <p className="text-lg font-semibold text-[#5D93AD]">Digital Marketing Introduction Class</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Performance Marketing Class</p>
-          <p className="text-lg font-semibold text-[#5D93AD]">Marketplace Strategy Class</p>
-        </Card>
+      <div className="lg:w-[50%] flex flex-col align-middle justify-center gap-4 lg:gap-0">
+        <div className="flex flex-row align-middle justify-center">SAMPLE REPORT DIGITAL MARKETING IMG</div>
       </div>
     </section>
   )
