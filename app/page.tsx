@@ -92,7 +92,7 @@ function WhySection() {
 
 function ServicesSection() {
   return (
-    <section id="ServicesSection" className="bg-white bg-cover h-screen flex flex-col items-center justify-between align-middle text-center relative lg:text-left">
+    <section id="ServicesSection" className="bg-white bg-cover h-screen flex flex-col items-center justify-around lg:justify-between align-middle text-center relative lg:text-left">
       <div className="lg:w-[60%] flex flex-col align-middle justify-center">
         <InViewWrapper>
           <div className="text-lg mt-5 p-8 lg:mt-0 underline underline-offset-2">Our Services</div>
