@@ -13,4 +13,5 @@ export const services = [
   { title: "Digital Media Buying" },
   { title: "Marketplace Management" },
   { title: "Digital Corporate Training" },
+  { title: "Creative Solution" },
 ];
