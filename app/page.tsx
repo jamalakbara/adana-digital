@@ -1,7 +1,6 @@
 "use client"
 import MotionWrapper from "@/components/client/motion-wrapper";
 import { services } from "@/lib/data";
-import { ServiceCard } from "@/components/client/service-card";
 import { Card } from "@/components/ui/card";
 import InViewWrapper from "@/components/client/in-view-wrapper";
 import { MoveDownArrow } from "@/components/client/move-down-arrow";
@@ -11,6 +10,7 @@ import { Navbar } from "@/components/client/navbar";
 import { Socmed } from "@/components/client/socmed";
 import { useState } from "react";
 import Link from 'next/link'
+import { BrandsCarousel } from "@/components/client/brands-carousel";
 
 export default function Home() {
   return (
@@ -93,7 +93,7 @@ function WhySection() {
 }
 
 function ServicesSection() {
-  const [classCard, setClassCard] = useState("h-64");
+  const [, setClassCard] = useState("h-64");
 
   const handleMouseEnter = () => {
     setClassCard("h-64");
@@ -104,19 +104,36 @@ function ServicesSection() {
   }
 
   return (
-    <section id="ServicesSection" className="bg-white bg-cover h-screen flex flex-col justify-center gap-24 text-center relative lg:text-left py-20 px-10">
-      <div className="flex flex-col items-center justify-center text-[#334E4D] w-1/2">
+    <section id="ServicesSection" className="bg-white bg-cover h-screen flex flex-col justify-center gap-10 lg:gap-24 text-center relative lg:text-left py-20 px-10">
+      <div className="flex flex-col items-center justify-center text-[#334E4D] lg:w-1/2">
         <InViewWrapper>
-          <h2 className="text-2xl mt-5 lg:mt-0 underline underline-offset-2">Our Services</h2>
-          <p className="text-4xl font-bold mt-2">
+          <h2 className="text-xl lg:text-2xl mt-5 lg:mt-0 underline underline-offset-8">Our Services</h2>
+          <p className="text-2xl lg:text-4xl font-bold mt-2">
             Evolving Together to utilize Innovative Digital Solutions to Develop Your Brand.
           </p>
         </InViewWrapper>
       </div>
 
-      <div className="flex gap-4 items-end">
+      <div className="flex flex-col gap-4 lg:hidden">
         {services.map((s, i) => (
-          <Link href={s.url} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`border-2 border-[#334E4D] ${i===services.length-1 ? 'bg-[#EEFF01] border-[#EEFF01] h-64' : ''} rounded-sm p-8 basis-1/5 hover:h-64 flex flex-col justify-between hover:bg-[#EEFF01] hover:border-[#EEFF01] cursor-pointer text-[#334E4D] transition-all`}>
+          <Link
+            key={s.url}
+            href={s.url}
+            className={`border-2 border-[#334E4D] ${i===services.length-1 ? 'bg-[#EEFF01] border-[#EEFF01]' : ''} rounded-sm p-2 flex flex-col justify-between hover:bg-[#EEFF01] hover:border-[#EEFF01] cursor-pointer text-[#334E4D] transition-all text-sm`}
+          >
+            <p className="text-2xl">{`0${i+1}. `} {s.title}</p>
+          </Link>
+        ))}
+      </div>
+      <div className="hidden lg:flex flex-row gap-4 items-end">
+        {services.map((s, i) => (
+          <Link
+            key={s.url}
+            href={s.url}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className={`border-2 border-[#334E4D] ${i===services.length-1 ? 'bg-[#EEFF01] border-[#EEFF01] h-64' : ''} rounded-sm p-8 basis-1/5 hover:h-64 flex flex-col justify-between hover:bg-[#EEFF01] hover:border-[#EEFF01] cursor-pointer text-[#334E4D] transition-all`}
+          >
             <span>{`0${i+1}`}</span>
             <p className="text-2xl">{s.title}</p>
           </Link>
@@ -228,37 +245,20 @@ function DigitalTechnologyPartnerSection() {
       <InViewWrapper>
         <div className="absolute top-6 left-6 font-bold text-[#527D38]">Adana Digital<br />2024</div>
       </InViewWrapper>
-      <div className="text-3xl text-[#527D38] text-center lg:text-left lg:px-20">Our Digital Tools and Media Partners</div>
+      <div className="text-3xl text-[#527D38] text-center lg:text-left lg:px-20 underline underline-offset-8">Our Digital Tools and Media Partners</div>
       <PartnersCarousel className="mx-auto" />
     </section>
   )
 }
 
 function SuccessStoryAndClientListSection() {
-  const brands = ["at Mauv", "Malo Home", "Buttonscarves", "Malo Toys", "Berlynn", "Noor Abika", "Cloxvox", "Mava Kabar", "Gurih7", "Mom Uung", "homeground", "Smells Good", "Legato Gelato", "Tangerine Marche", "Figlio Apparel", "Torgana"];
   return (
-    <section id="SuccessStoryAndClientListSection" className="bg-artboard8 bg-cover h-screen flex flex-col gap-4 lg:gap-10 justify-center align-middle text-center relative lg:text-left">
+    <section id="SuccessStoryAndClientListSection" className="bg-artboard8 bg-cover h-screen flex flex-col gap-4 lg:gap-10 justify-start lg:justify-center pt-10 lg:pt-0 align-middle text-center relative lg:text-left">
       <InViewWrapper>
-        <div className="text-3xl text-[#527D38] text-center lg:text-left mx-5 lg:mx-20">We Collaborate Remarkably With Incredible Brands</div>
+        <div className="text-3xl text-[#527D38] text-center mx-5 underline underline-offset-8">We Collaborate Remarkably With Incredible Brands</div>
       </InViewWrapper>
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 align-middle justify-center">
-        <div className="grow lg:grow-[4] mx-auto lg:ml-20 lg:mr-4 p-4 grid grid-cols-2 rounded-md bg-[#5D93AD] h-fit lg:overflow-y-hidden lg:h-[50vh]">
-          {brands.map((b, i) => (
-            <div key={i} className="text-white italic">{b}</div>
-          ))}
-        </div>
-        <div className="grow lg:grow-[6] flex flex-col gap-8 lg:ml-4 lg:mr-20 h-[25vh] lg:h-[50vh] overflow-y-scroll p-5 lg:p-0">
-          {brands.map((b, i) => (
-            <Card key={i} className="flex flex-col lg:flex-row align-middle justify-evenly">
-              <div className="flex flex-col gap-2">
-                <h4 className="font-semibold">{b}</h4>
-                <div className="block lg:hidden">Service yang dipakai</div>
-                <p className="">Description of work</p>
-              </div>
-              <div className="hidden lg:block">Service yang dipakai</div>
-            </Card>
-          ))}
-        </div>
+        <BrandsCarousel />
       </div>
     </section>
   )
@@ -268,7 +268,7 @@ function LeadsAndContactsSection() {
   return (
     <section id="LeadsAndContactsSection" className="bg-artboard9 bg-cover h-screen flex flex-col gap-20 justify-center align-middle px-20 relative lg:text-left">
       <div className="text-white text-lg">Let&apos;s create a measurable impact towards your business</div>
-      <div className="text-white font-semibold text-5xl underline underline-offset-2">Start Your Journey Now</div>
+      <div className="text-white font-semibold text-5xl underline underline-offset-8">Start Your Journey Now</div>
       <div className="flex flex-col lg:flex-row align-middle gap-6 lg:gap-0 lg:justify-around">
         <div className="text-white">
           Jl. Pasir Luyu No. 33 (40254)<br />
