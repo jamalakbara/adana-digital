@@ -1,4 +1,4 @@
-// import Image from "next/image";
+"use client"
 import MotionWrapper from "@/components/client/motion-wrapper";
 import { services } from "@/lib/data";
 import { ServiceCard } from "@/components/client/service-card";
@@ -9,6 +9,8 @@ import { LetsDiscussText } from "@/components/client/lets-discuss-text";
 import { PartnersCarousel } from "@/components/client/partners-carousel";
 import { Navbar } from "@/components/client/navbar";
 import { Socmed } from "@/components/client/socmed";
+import { useState } from "react";
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -76,13 +78,13 @@ function WhySection() {
         </div>
         <div className="flex-grow flex flex-col justify-center">
           <div className="">
-            <h2 className="text-2xl lg:text-4xl font-extrabold mt-5 lg:mt-0">Why Adana?</h2>
-            <div className="text-md lg: text-xl mt-5 lg:w-fit lg:mx-0 w-[80%] mx-auto">
-              <span className="text-[#334E4D]">Adana Digital</span> focus to craft performance marketing strategy and digital media to achieve <span className="text-[#334E4D]">measurable impact</span> in order to <span className="text-[#334E4D]">accelerate business growth</span>
-            </div>
-            <div className="text-md lg:text-xl mt-5 lg:w-fit lg:mx-0 w-[80%] mx-auto">
-              Recognizing that every <span className="text-[#334E4D]">company is unique</span>, we aim to provide excellence strategies by taking a <span className="text-[#334E4D]">customized approach</span> for each of our partner
-            </div>
+            <h2 className="text-2xl lg:text-4xl font-extrabold mt-5 lg:mt-0 text-[#334E4D]">Why Adana?</h2>
+            <p className="text-md lg: text-xl mt-5 lg:w-fit lg:mx-0 w-[80%] mx-auto text-[#334E4D]">
+              Adana Digitalfocus to craft performance marketing strategy and digital media to achieve measurable impact in order to accelerate business growth.
+            </p>
+            <p className="text-md lg: text-xl mt-5 lg:w-fit lg:mx-0 w-[80%] mx-auto text-[#334E4D]">
+              Recognizing that every company is unique, we aim to provide excellence strategies by taking a customized approach for each of our partner
+            </p>
           </div>
         </div>
       </div>
@@ -91,27 +93,34 @@ function WhySection() {
 }
 
 function ServicesSection() {
+  const [classCard, setClassCard] = useState("h-64");
+
+  const handleMouseEnter = () => {
+    setClassCard("h-64");
+  }
+
+  const handleMouseLeave = () => {
+    setClassCard(" ");
+  }
+
   return (
-    <section id="ServicesSection" className="bg-white bg-cover h-screen flex flex-col items-center justify-around lg:justify-between align-middle text-center relative lg:text-left">
-      <div className="lg:w-[60%] flex flex-col align-middle justify-center">
+    <section id="ServicesSection" className="bg-white bg-cover h-screen flex flex-col justify-center gap-24 text-center relative lg:text-left py-20 px-10">
+      <div className="flex flex-col items-center justify-center text-[#334E4D] w-1/2">
         <InViewWrapper>
-          <div className="text-lg mt-5 p-8 lg:mt-0 underline underline-offset-2">Our Services</div>
-          <h2 className="text-2xl font-bold mt-2 lg:pl-8 lg:mt-0">
+          <h2 className="text-2xl mt-5 lg:mt-0 underline underline-offset-2">Our Services</h2>
+          <p className="text-4xl font-bold mt-2">
             Evolving Together to utilize Innovative Digital Solutions to Develop Your Brand.
-          </h2>
+          </p>
         </InViewWrapper>
       </div>
-      <div className="lg:w-[40%] flex flex-col align-middle justify-center mt-3 lg:mt-0">
-        <div className="hidden grow lg:flex flex-row gap-4 justify-center lg:mt-4 h-[400px]">
-          {services.map((service, index) => (
-            <ServiceCard key={`${index+1}`} url={service.url} title={service.title} className="w-[220px] h-[200px] hover:h-[300px] p-2 transition-all ease-in-out duration-300 rounded-lg" />
-          ))}
-        </div>
-        <div className="grow lg:hidden flex flex-col gap-2 align-middle justify-center mx-auto lg:mx-0">
-          {services.map((service, index) => (
-            <ServiceCard key={`${index+1}`} url={service.url} title={service.title} className="w-[200px] lg:w-[300px] p-2 text-sm" />
-          ))}
-        </div>
+
+      <div className="flex gap-4 items-end">
+        {services.map((s, i) => (
+          <Link href={s.url} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`border-2 border-[#334E4D] ${i===services.length-1 ? 'bg-[#EEFF01] border-[#EEFF01] h-64' : ''} rounded-sm p-8 basis-1/5 hover:h-64 flex flex-col justify-between hover:bg-[#EEFF01] hover:border-[#EEFF01] cursor-pointer text-[#334E4D] transition-all`}>
+            <span>{`0${i+1}`}</span>
+            <p className="text-2xl">{s.title}</p>
+          </Link>
+        ))}
       </div>
     </section>
   )
