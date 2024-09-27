@@ -245,7 +245,7 @@ function DigitalTechnologyPartnerSection() {
       <InViewWrapper>
         <div className="absolute top-6 left-6 font-bold text-[#527D38]">Adana Digital<br />2024</div>
       </InViewWrapper>
-      <div className="text-3xl text-[#527D38] text-center lg:text-left lg:px-20 underline underline-offset-8">Our Digital Tools and Media Partners</div>
+      <div className="text-3xl text-[#527D38] text-center lg:text-left lg:px-20 underline underline-offset-8 lg:mx-auto">Our Digital Tools and Media Partners</div>
       <PartnersCarousel className="mx-auto" />
     </section>
   )
