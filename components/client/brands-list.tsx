@@ -9,7 +9,7 @@ export const BrandsList = () => {
       {brands.map((b, i) => (
         <li key={i+1} className="">
           <div className="py-2 flex flex-row justify-between gap-2 h-[140px] lg:h-[120px]">
-            <span className="text-[#527D38] text-lg lg:text-xl">{b.num+1}.</span>
+            <span className="text-[#527D38] text-lg lg:text-xl">{String(b.num+1).padStart(3, "0")}.</span>
             <div className="flex flex-col gap-2">
               <p className="text-[#527D38] text-md lg:text-lg font-semibold">{b.name}</p>
               <p className="text-[#527D38] text-sm lg:text-md">{b.desc}</p>
