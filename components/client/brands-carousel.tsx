@@ -1,97 +1,12 @@
 "use client"
 
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel'
 import Autoplay from "embla-carousel-autoplay"
 import { chunk } from "lodash"
+import { brands } from '@/lib/data'
 
 export const BrandsCarousel = ({ className }: { className?: string }) => {
-  const brands = useMemo(() => {
-    const out = [
-      {
-        name: "at Mauv",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Malo Home",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Buttonscarves",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Malo Toys",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Berlynn",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Noor Abika",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Cloxvox",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Mava Kabar",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Gurih7",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Mom Uung",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "homeground",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Smells Good",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Legato Gelato",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Tangerine Marche",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Figlio Apparel",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-      {
-        name: "Torgana",
-        desc: "description of experience",
-        serv: ["Performance Marketing", "Digital Buying", "Marketplace"],
-      },
-    ];
-    return out.map((o, num) => ({ ...o, num }));
-  }, []);
-
   return (
     <React.Fragment>
       <Carousel

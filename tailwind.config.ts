@@ -8,15 +8,15 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-		backgroundImage: {
-			artboard1: "url('../public/assets/artboard-1.png')",
-			artboard2: "url('../public/assets/artboard-2.png')",
-			artboard3: "url('../public/assets/artboard-3.png')",
-			artboard7: "url('../public/assets/artboard-7.png')",
-			artboard8: "url('../public/assets/artboard-8.png')",
-			artboard9: "url('../public/assets/artboard-9.png')",
-		},
-  	extend: {
+		extend: {
+			backgroundImage: {
+				artboard1: "url('../public/assets/artboard-1.png')",
+				artboard2: "url('../public/assets/artboard-2.png')",
+				artboard3: "url('../public/assets/artboard-3.png')",
+				artboard7: "url('../public/assets/artboard-7.png')",
+				artboard8: "url('../public/assets/artboard-8.png')",
+				artboard9: "url('../public/assets/artboard-9.png')",
+			},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

@@ -10,7 +10,7 @@ import { Navbar } from "@/components/client/navbar";
 import { Socmed } from "@/components/client/socmed";
 import { useState } from "react";
 import Link from 'next/link'
-import { BrandsCarousel } from "@/components/client/brands-carousel";
+import { BrandsList } from "@/components/client/brands-list";
 
 export default function Home() {
   return (
@@ -253,12 +253,12 @@ function DigitalTechnologyPartnerSection() {
 
 function SuccessStoryAndClientListSection() {
   return (
-    <section id="SuccessStoryAndClientListSection" className="bg-artboard8 bg-cover h-screen flex flex-col gap-4 lg:gap-10 justify-start lg:justify-center pt-10 lg:pt-0 align-middle text-center relative lg:text-left">
+    <section id="SuccessStoryAndClientListSection" className="bg-artboard8 h-screen flex flex-col gap-4 lg:gap-10 justify-start lg:justify-center pt-10 lg:pt-0 align-middle text-center relative lg:text-left">
       <InViewWrapper>
         <div className="text-3xl text-[#527D38] text-center mx-5 underline underline-offset-8">We Collaborate Remarkably With Incredible Brands</div>
       </InViewWrapper>
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 align-middle justify-center">
-        <BrandsCarousel />
+        <BrandsList />
       </div>
     </section>
   )
