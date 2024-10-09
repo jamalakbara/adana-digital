@@ -254,11 +254,11 @@ function SuccessStoryAndClientListSection() {
 
 function LeadsAndContactsSection() {
   return (
-    <section id="LeadsAndContactsSection" className="bg-white h-screen flex flex-col gap-20 justify-center align-middle px-20 relative lg:text-left">
-      <div className="text-white text-lg">Let&apos;s create a measurable impact towards your business</div>
-      <div className="text-white font-semibold text-5xl underline underline-offset-8">Start Your Journey Now</div>
-      <div className="flex flex-col lg:flex-row align-middle gap-6 lg:gap-0 lg:justify-around">
-        <div className="text-white">
+    <section id="LeadsAndContactsSection" className="bg-black h-screen flex flex-col gap-20 justify-center align-middle px-20 relative lg:text-left">
+      <div className="text-white text-lg text-center lg:text-left">Let&apos;s create a measurable impact towards your business</div>
+      <div className="text-white font-semibold text-5xl underline underline-offset-[10px] text-center lg:text-right">Start Your Journey Now</div>
+      <div className="flex flex-col lg:flex-row align-middle gap-6 lg:gap-0 lg:justify-around lg:mt-20">
+        <div className="text-white text-center lg:text-left">
           Jl. Pasir Luyu No. 33 (40254)<br />
           Regol, Kelurahan Pasirluyu, Kota Bandung<br />
           Jawa Barat
@@ -266,7 +266,7 @@ function LeadsAndContactsSection() {
         <div className="text-white">
           <Socmed />
         </div>
-        <div className="text-white">
+        <div className="text-white text-center lg:text-left">
           contact@byadana.com<br />
           +62-811-2114-142
         </div>
