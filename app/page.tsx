@@ -11,6 +11,8 @@ import { Socmed } from "@/components/client/socmed";
 import { useState } from "react";
 import Link from 'next/link'
 import { BrandsList } from "@/components/client/brands-list";
+import glodana_logo from "@/public/assets/glodana-logo.svg";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -32,20 +34,20 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section id="HeroSection" className="bg-artboard1 bg-cover h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
+    <section id="HeroSection" className="bg-white h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
       <InViewWrapper>
-        <div className="lg:absolute lg:top-[50%] lg:left-20 text-5xl text-white">
+        <div className="lg:absolute lg:top-[50%] lg:right-20 text-5xl text-[#334E4D]">
           Collaborative Growth<br />Through Impactful Digital Strategies
         </div>
       </InViewWrapper>
       <InViewWrapper>
         <div className="lg:absolute lg:bottom-20 lg:right-20 text-2xl">
-          <LetsDiscussText className="text-white" />
+          <LetsDiscussText className="text-[#334E4D]" />
         </div>
       </InViewWrapper>
       <InViewWrapper>
         <div className="flex flex-row align-middle justify-center lg:absolute lg:bottom-20 left-20">
-          <MoveDownArrow className="text-white" />
+          <MoveDownArrow className="text-[#334E4D]" />
         </div>
       </InViewWrapper>
     </section>
@@ -54,40 +56,34 @@ function HeroSection() {
 
 function WhySection() {
   return (
-    <section id="WhySection" className="bg-artboard2 bg-cover h-screen flex flex-col justify-evenly align-middle text-center relative lg:text-left">
-      <div className="flex flex-col lg:flex-row mt-10 lg:mx-20">
-        <div className="flex-grow w-[300px] mx-auto lg:mx-0 lg:w-auto">
-          <div className="flex flex-col lg:mx-20">
-            <div className="flex flex-row">
-              <div className="h-[150px] w-[150px] bg-[#334E4D] rounded-md relative">
-                <div className="text-white font-semibold absolute top-12 left-6">Transparent</div>
-              </div>
-              <div className="h-[150px] w-[150px] bg-[#EEFF01] rounded-full relative">
-                <div className="text-[#334E4D] font-semibold absolute top-12 left-8">Excellent<br />Deliverables</div>
-              </div>
-            </div>
-            <div className="flex flex-row">
-              <div className="h-[150px] w-[150px] bg-[#EEFF01] rounded-full relative">
-                <div className="text-[#334E4D] font-semibold absolute top-16 left-4">Growth Minded</div>
-              </div>
-              <div className="right-triangle-lt bg-[#6E8798] w-[170px] relative">
-                <div className="text-white font-semibold absolute top-4 left-4">Teamwork</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex-grow flex flex-col justify-center">
-          <div className="">
-            <h2 className="text-2xl lg:text-4xl font-extrabold mt-5 lg:mt-0 text-[#334E4D]">Why Adana?</h2>
-            <p className="text-md lg: text-xl mt-5 lg:w-fit lg:mx-0 w-[80%] mx-auto text-[#334E4D]">
-              Adana Digitalfocus to craft performance marketing strategy and digital media to achieve measurable impact in order to accelerate business growth.
-            </p>
-            <p className="text-md lg: text-xl mt-5 lg:w-fit lg:mx-0 w-[80%] mx-auto text-[#334E4D]">
-              Recognizing that every company is unique, we aim to provide excellence strategies by taking a customized approach for each of our partner
-            </p>
-          </div>
+    <section id="WhySection" className="bg-white h-screen flex flex-col justify-center items-center text-center relative">
+      <div className="h-[150px] w-[150px] bg-[#334E4D] rounded-md absolute top-[20%] left-[20%] invisible lg:visible">
+        <div className="relative">
+          <div className="text-white font-semibold absolute top-12 left-6">Transparent</div>
         </div>
       </div>
+      <div className="h-[150px] w-[150px] bg-[#EEFF01] rounded-full absolute top-[10%] right-[25%] invisible lg:visible">
+        <div className="re;ative">
+          <div className="text-[#334E4D] font-semibold absolute top-12 left-8">Excellent<br />Deliverables</div>
+        </div>
+      </div>
+      <div className="h-[150px] w-[150px] bg-[#EEFF01] rounded-full absolute bottom-[5%] left-[20%] invisible lg:visible">
+        <div className="relative">
+          <div className="text-[#334E4D] font-semibold absolute top-16 left-4">Growth Minded</div>
+        </div>
+      </div>
+      <div className="right-triangle-lt bg-[#6E8798] w-[170px] absolute bottom-[10%] right-[15%] invisible lg:visible">
+        <div className="relative">
+          <div className="text-white font-semibold absolute top-4 left-4">Teamwork</div>
+        </div>
+      </div>
+      <h2 className="text-2xl lg:text-4xl font-extrabold mt-5 lg:mt-0 text-[#334E4D]">Why Adana?</h2>
+      <p className="text-md lg: text-xl mt-5 lg:w-fit lg:mx-0 w-[80%] mx-auto text-[#334E4D]">
+        Adana Digitalfocus to craft performance marketing strategy and digital media to achieve measurable impact in order to accelerate business growth.
+      </p>
+      <p className="text-md lg: text-xl mt-5 lg:w-fit lg:mx-0 w-[80%] mx-auto text-[#334E4D]">
+        Recognizing that every company is unique, we aim to provide excellence strategies by taking a customized approach for each of our partner
+      </p>
     </section>
   )
 }
@@ -104,7 +100,7 @@ function ServicesSection() {
   }
 
   return (
-    <section id="ServicesSection" className="bg-white bg-cover h-screen flex flex-col justify-center gap-10 lg:gap-24 text-center relative lg:text-left py-20 px-10">
+    <section id="ServicesSection" className="bg-white lg:h-screen flex flex-col justify-center gap-10 lg:gap-24 text-center relative lg:text-left py-20 px-10">
       <div className="flex flex-col items-center justify-center text-[#334E4D] lg:w-1/2">
         <InViewWrapper>
           <h2 className="text-xl lg:text-2xl mt-5 lg:mt-0 underline underline-offset-8">Our Services</h2>
@@ -119,23 +115,33 @@ function ServicesSection() {
           <Link
             key={s.url}
             href={s.url}
-            className={`border-2 border-[#334E4D] ${i===services.length-1 ? 'bg-[#EEFF01] border-[#EEFF01]' : ''} rounded-sm p-2 flex flex-col justify-between hover:bg-[#EEFF01] hover:border-[#EEFF01] cursor-pointer text-[#334E4D] transition-all text-sm`}
+            className="flex flex-col items-center hover:opacity-70 transition-all ease-in-out"
           >
+            {i === services.length-1 ? <p className="text-2xl">Our Services</p> : null}
+            <div className="w-[250px] h-[200px] bg-red-500">IMG</div>
             <p className="text-2xl">{`0${i+1}. `} {s.title}</p>
+            {i === services.length-1 ? <p className="text-2xl flex flex-row gap-2">
+              by: <Image src={glodana_logo} alt="" width={150} />
+            </p> : null}
           </Link>
         ))}
       </div>
-      <div className="hidden lg:flex flex-row gap-4 items-end">
+      <div className="hidden lg:flex flex-row gap-4 justify-center">
         {services.map((s, i) => (
           <Link
             key={s.url}
             href={s.url}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className={`border-2 border-[#334E4D] ${i===services.length-1 ? 'bg-[#EEFF01] border-[#EEFF01] h-64' : ''} rounded-sm p-8 basis-1/5 hover:h-64 flex flex-col justify-between hover:bg-[#EEFF01] hover:border-[#EEFF01] cursor-pointer text-[#334E4D] transition-all`}
+            className="flex flex-col items-center gap-2 hover:opacity-70 transition-all ease-in-out relative"
           >
-            <span>{`0${i+1}`}</span>
-            <p className="text-2xl">{s.title}</p>
+            {i === services.length-1 ? <p className="text-2xl absolute top-[-50px] left-0">Our Services</p> : null}
+            <div className="w-[250px] h-[200px] bg-red-500">IMG</div>
+            <p className="text-xl">{s.title}</p>
+            {i === services.length-1 ? <p className="text-2xl absolute bottom-[-50px] left-0 flex flex-row gap-2">
+              by: <Image src={glodana_logo} alt="" width={150} />
+            </p> : null}
+
           </Link>
         ))}
       </div>
@@ -241,7 +247,7 @@ function DigitalCorporateTrainingSection() {
 
 function DigitalTechnologyPartnerSection() {
   return (
-    <section id="DigitalTechnologyPartnerSection" className="bg-artboard7 bg-cover h-screen flex flex-col gap-4 align-middle justify-center mx-auto relative lg:text-left">
+    <section id="DigitalTechnologyPartnerSection" className="bg-white h-screen flex flex-col gap-4 align-middle justify-center mx-auto relative lg:text-left">
       <InViewWrapper>
         <div className="absolute top-6 left-6 font-bold text-[#527D38]">Adana Digital<br />2024</div>
       </InViewWrapper>
@@ -253,7 +259,7 @@ function DigitalTechnologyPartnerSection() {
 
 function SuccessStoryAndClientListSection() {
   return (
-    <section id="SuccessStoryAndClientListSection" className="bg-artboard8 h-screen flex flex-col gap-4 lg:gap-10 justify-start lg:justify-center pt-10 lg:pt-0 align-middle text-center relative lg:text-left">
+    <section id="SuccessStoryAndClientListSection" className="bg-white h-screen flex flex-col gap-4 lg:gap-10 justify-start lg:justify-center pt-10 lg:pt-0 align-middle text-center relative lg:text-left">
       <InViewWrapper>
         <div className="text-3xl text-[#527D38] text-center mx-5 underline underline-offset-8">We Collaborate Remarkably With Incredible Brands</div>
       </InViewWrapper>
@@ -266,7 +272,7 @@ function SuccessStoryAndClientListSection() {
 
 function LeadsAndContactsSection() {
   return (
-    <section id="LeadsAndContactsSection" className="bg-artboard9 bg-cover h-screen flex flex-col gap-20 justify-center align-middle px-20 relative lg:text-left">
+    <section id="LeadsAndContactsSection" className="bg-white h-screen flex flex-col gap-20 justify-center align-middle px-20 relative lg:text-left">
       <div className="text-white text-lg">Let&apos;s create a measurable impact towards your business</div>
       <div className="text-white font-semibold text-5xl underline underline-offset-8">Start Your Journey Now</div>
       <div className="flex flex-col lg:flex-row align-middle gap-6 lg:gap-0 lg:justify-around">

@@ -2,7 +2,8 @@
 
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
-import logo_yellow_green from "@/public/assets/logo-yellow-green.svg"
+// import logo_yellow_green from "@/public/assets/logo-yellow-green.svg"
+import logo_outline from "@/public/assets/adana-logo-green-outline.svg"
 import { useEffect, useState } from "react"
 import { pages } from "@/lib/data"
 import Link from "next/link"
@@ -15,7 +16,7 @@ export function Navbar({ className }: { className?: string }) {
   const [toggleNav, setToggleNav] = useState(false);
   const [y, setY] = useState(0);
   const [visible, setVisible] = useState(true);
-  const [menuColor, setMenuColor] = useState("white");
+  const [menuColor, setMenuColor] = useState("black");
   useEffect(() => {
     window.onscroll = () => {
       setY(window.scrollY);
@@ -23,7 +24,7 @@ export function Navbar({ className }: { className?: string }) {
     if (y >= 1*window.innerHeight) {
       setMenuColor("black");
     } else {
-      setMenuColor("white");
+      setMenuColor("black");
     }
     if (y >= 2*window.innerHeight) {
       setVisible(false);
@@ -53,9 +54,9 @@ export function Navbar({ className }: { className?: string }) {
       </div>
       <div className="flex flex-row align-middle justify-start mx-2">
         <Image
-          src={logo_yellow_green}
+          src={logo_outline}
           alt=""
-          width={70}
+          width={50}
           className="lg:absolute lg:top-10 lg:left-20"
         />
       </div>
@@ -90,9 +91,9 @@ export function Navbar({ className }: { className?: string }) {
       </div>
       <div className="flex flex-row align-middle justify-center">
         <Image
-          src={logo_yellow_green}
+          src={logo_outline}
           alt=""
-          width={100}
+          width={70}
           className="lg:absolute lg:top-10 lg:left-20"
         />
       </div>
