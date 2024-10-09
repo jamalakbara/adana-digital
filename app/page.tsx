@@ -1,7 +1,6 @@
 "use client"
 import MotionWrapper from "@/components/client/motion-wrapper";
 import { services } from "@/lib/data";
-import { Card } from "@/components/ui/card";
 import InViewWrapper from "@/components/client/in-view-wrapper";
 import { MoveDownArrow } from "@/components/client/move-down-arrow";
 import { LetsDiscussText } from "@/components/client/lets-discuss-text";
@@ -151,23 +150,20 @@ function ServicesSection() {
 
 function PerformanceMarketingSection() {
   return (
-    <section id="PerformanceMarketingSection" className="bg-white h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left py-20 px-10">
-      <div className="lg:w-[50%] flex flex-col align-middle justify-center px-6 gap-4 lg:gap-4">
-        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
-          <h2 className="text-lg font-semibold text-black">Performance Marketing</h2>
-          <div>
-            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
-          </div>
-        </Card>
-        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
-          <h2 className="text-lg font-semibold text-black">Digital Advertising Solution</h2>
-          <div>
-            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
-          </div>
-        </Card>
-      </div>
-      <div className="lg:w-[50%] flex flex-col align-middle justify-center gap-4 lg:gap-0">
-        <div className="flex flex-row align-middle justify-center">SAMPLE REPORT DIGITAL MARKETING IMG</div>
+    <section id="PerformanceMarketingSection" className="bg-gray-100 lg:h-screen py-20 px-10">
+      <div className="relative">
+        <div className="lg:absolute lg:top-[100px] lg:left-[250px] h-[400px] lg:w-[250px] bg-red-500">IMG 1</div>
+        <div className="lg:absolute lg:top-[400px] lg:left-[350px] h-[200px] lg:w-[200px] bg-orange-500">IMG 2</div>
+        <div className="lg:absolute lg:top-[150px] lg:left-[700px] lg:h-[100px] lg:w-[700px] flex flex-col justify-between mt-5 lg:mt-0">
+          <h2 className="text-2xl font-semibold">Performance Marketing</h2>
+          <p className="text-lg font-semibold">Strategize for effectiveness and optimize for optimum impact</p>
+        </div>
+        <div className="lg:absolute lg:top-[350px] lg:left-[800px] lg:h-[200px] lg:w-[500px] flex flex-col gap-2 mt-5 lg:mt-0">
+          <p className="font-semibold">Digital Advertising Solution</p>
+          <p className="font-semibold">Data Driven Marketing Analysis</p>
+          <p className="font-semibold">Business Growth Consultation</p>
+          <p className="font-semibold">Email Marketing</p>
+        </div>
       </div>
     </section>
   )
@@ -175,23 +171,18 @@ function PerformanceMarketingSection() {
 
 function MarketplaceManagementSection() {
   return (
-    <section id="MarketplaceManagementSection" className="bg-white h-screen flex flex-col lg:flex-row-reverse gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left py-20 px-10">
-      <div className="lg:w-[50%] flex flex-col align-middle justify-center px-6 gap-4 lg:gap-4">
-        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
-          <h2 className="text-lg font-semibold text-black">Performance Marketing</h2>
-          <div>
-            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
-          </div>
-        </Card>
-        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
-          <h2 className="text-lg font-semibold text-black">Digital Advertising Solution</h2>
-          <div>
-            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
-          </div>
-        </Card>
-      </div>
-      <div className="lg:w-[50%] flex flex-col align-middle justify-center gap-4 lg:gap-0">
-        <div className="flex flex-row align-middle justify-center">SAMPLE REPORT DIGITAL MARKETING IMG</div>
+    <section id="MarketplaceManagementSection" className="bg-gray-300 lg:h-screen py-20 px-10">
+      <div className="relative">
+        <div className="lg:absolute lg:top-[150px] left-[250px] lg:h-[100px] lg:w-[700px] flex flex-col justify-between">
+          <h2 className="text-2xl font-semibold">Marketplace Management</h2>
+          <p className="text-lg font-semibold">Managing end to end business and marketing strategy for marketplace</p>
+        </div>
+        <div className="lg:absolute lg:top-[350px] left-[350px] lg:h-[200px] lg:w-[500px] flex flex-col gap-2 mt-5 lg:mt-0">
+          <p className="font-semibold">Affiliate Marketing</p>
+          <p className="font-semibold">Marketplace SEO</p>
+          <p className="font-semibold">Marketplace Program Consultation</p>
+        </div>
+        <div className="lg:absolute lg:top-[100px] lg:left-[1000px] h-[500px] lg:w-[300px] bg-green-500 mt-5 lg:mt-0">IMG 1</div>
       </div>
     </section>
   )
@@ -199,23 +190,19 @@ function MarketplaceManagementSection() {
 
 function DigitalMediaBuyingSection() {
   return (
-    <section id="DigitalMediaBuyingSection" className="bg-white h-screen flex flex-col lg:flex-row gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left py-20 px-10">
-      <div className="lg:w-[50%] flex flex-col align-middle justify-center px-6 gap-4 lg:gap-4">
-        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
-          <h2 className="text-lg font-semibold text-black">Performance Marketing</h2>
-          <div>
-            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
-          </div>
-        </Card>
-        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
-          <h2 className="text-lg font-semibold text-black">Digital Advertising Solution</h2>
-          <div>
-            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
-          </div>
-        </Card>
-      </div>
-      <div className="lg:w-[50%] flex flex-col align-middle justify-center gap-4 lg:gap-0">
-        <div className="flex flex-row align-middle justify-center">SAMPLE REPORT DIGITAL MARKETING IMG</div>
+    <section id="DigitalMediaBuyingSection" className="bg-gray-100 lg:h-screen py-20 px-10">
+      <div className="relative">
+        <div className="lg:absolute lg:top-[50px] lg:left-[250px] h-[500px] lg:w-[350px] bg-red-500">IMG 1</div>
+        <div className="lg:absolute lg:top-[150px] lg:left-[700px] lg:h-[100px] lg:w-[700px] flex flex-col justify-between mt-5 lg:mt-0">
+          <h2 className="text-2xl font-semibold">Digital Media Buying</h2>
+          <p className="text-lg font-semibold">Resonates Your Brand Through Digital Media Buying</p>
+        </div>
+        <div className="lg:absolute lg:top-[350px] lg:left-[800px] lg:h-[200px] lg:w-[500px] flex flex-col gap-2 mt-5 lg:mt-0">
+          <p className="font-semibold">OTT and OLV Media Placement</p>
+          <p className="font-semibold">Digital Media Advertorials</p>
+          <p className="font-semibold">Mobile Push Notification</p>
+          <p className="font-semibold">Digital OOH</p>
+        </div>
       </div>
     </section>
   )
@@ -223,23 +210,18 @@ function DigitalMediaBuyingSection() {
 
 function DigitalCorporateTrainingSection() {
   return (
-    <section id="DigitalCorporateTrainingSection" className="bg-white h-screen flex flex-col lg:flex-row-reverse gap-4 lg:gap-0 justify-center align-middle text-center relative lg:text-left py-20 px-10">
-      <div className="lg:w-[50%] flex flex-col align-middle justify-center px-6 gap-4 lg:gap-4">
-        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
-          <h2 className="text-lg font-semibold text-black">Performance Marketing</h2>
-          <div>
-            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
-          </div>
-        </Card>
-        <Card className="p-8 grow flex flex-col gap-8 bg-[#5D93AD]">
-          <h2 className="text-lg font-semibold text-black">Digital Advertising Solution</h2>
-          <div>
-            <p className="text-base font-medium text-black">Strategize for effectiveness and optimize for optimum impact</p>
-          </div>
-        </Card>
-      </div>
-      <div className="lg:w-[50%] flex flex-col align-middle justify-center gap-4 lg:gap-0">
-        <div className="flex flex-row align-middle justify-center">SAMPLE REPORT DIGITAL MARKETING IMG</div>
+    <section id="DigitalCorporateTrainingSection" className="bg-gray-300 lg:h-screen py-20 px-10">
+      <div className="relative">
+        <div className="lg:absolute lg:top-[150px] left-[150px] lg:h-[100px] lg:w-[500px] flex flex-col justify-between">
+          <h2 className="text-2xl font-semibold">Digital Marketing Corporate Training</h2>
+          <p className="text-lg font-semibold">Accelerate digital knowledge to maximize digital presence or digital business penetration</p>
+        </div>
+        <div className="lg:absolute lg:top-[350px] left-[250px] lg:h-[200px] lg:w-[500px] flex flex-col gap-2 mt-5 lg:mt-0">
+          <p className="font-semibold">Digital Marketing Introduction Class</p>
+          <p className="font-semibold">Performance Marketing Class</p>
+          <p className="font-semibold">Marketplace Strategy Class</p>
+        </div>
+        <div className="lg:absolute lg:top-[100px] lg:left-[800px] h-[400px] lg:w-[600px] bg-green-500 mt-5 lg:mt-0">IMG 1</div>
       </div>
     </section>
   )
