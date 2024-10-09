@@ -56,34 +56,34 @@ function HeroSection() {
 
 function WhySection() {
   return (
-    <section id="WhySection" className="bg-white h-screen flex flex-col justify-center items-center text-center relative">
-      <div className="h-[150px] w-[150px] bg-[#334E4D] rounded-md absolute top-[20%] left-[20%] invisible lg:visible">
-        <div className="relative">
-          <div className="text-white font-semibold absolute top-12 left-6">Transparent</div>
-        </div>
-      </div>
-      <div className="h-[150px] w-[150px] bg-[#EEFF01] rounded-full absolute top-[10%] right-[25%] invisible lg:visible">
-        <div className="re;ative">
-          <div className="text-[#334E4D] font-semibold absolute top-12 left-8">Excellent<br />Deliverables</div>
-        </div>
-      </div>
-      <div className="h-[150px] w-[150px] bg-[#EEFF01] rounded-full absolute bottom-[5%] left-[20%] invisible lg:visible">
-        <div className="relative">
-          <div className="text-[#334E4D] font-semibold absolute top-16 left-4">Growth Minded</div>
-        </div>
-      </div>
-      <div className="right-triangle-lt bg-[#6E8798] w-[170px] absolute bottom-[10%] right-[15%] invisible lg:visible">
-        <div className="relative">
-          <div className="text-white font-semibold absolute top-4 left-4">Teamwork</div>
-        </div>
-      </div>
+    <section id="WhySection" className="bg-white lg:h-screen flex flex-col gap-2 lg:gap-0 justify-center items-center text-center lg:relative">
       <h2 className="text-2xl lg:text-4xl font-extrabold mt-5 lg:mt-0 text-[#334E4D]">Why Adana?</h2>
       <p className="text-md lg: text-xl mt-5 lg:w-fit lg:mx-0 w-[80%] mx-auto text-[#334E4D]">
         Adana Digitalfocus to craft performance marketing strategy and digital media to achieve measurable impact in order to accelerate business growth.
       </p>
-      <p className="text-md lg: text-xl mt-5 lg:w-fit lg:mx-0 w-[80%] mx-auto text-[#334E4D]">
+      <p className="text-md lg: text-xl mt-5 lg:w-fit lg:mx-0 w-[80%] mx-auto text-[#334E4D] mb-4 lg:mb-0">
         Recognizing that every company is unique, we aim to provide excellence strategies by taking a customized approach for each of our partner
       </p>
+      <div className="h-[150px] w-[150px] bg-[#334E4D] rounded-md lg:absolute lg:top-[20%] lg:left-[20%]">
+        <div className="relative">
+          <div className="text-white font-semibold absolute top-12 left-6">Transparent</div>
+        </div>
+      </div>
+      <div className="h-[150px] w-[150px] bg-[#EEFF01] rounded-full lg:absolute lg:top-[10%] lg:right-[25%]">
+        <div className="relative">
+          <div className="text-[#334E4D] font-semibold absolute top-12 left-8">Excellent<br />Deliverables</div>
+        </div>
+      </div>
+      <div className="h-[150px] w-[150px] bg-[#EEFF01] rounded-full lg:absolute lg:bottom-[5%] lg:left-[20%]">
+        <div className="relative">
+          <div className="text-[#334E4D] font-semibold absolute top-16 left-4">Growth Minded</div>
+        </div>
+      </div>
+      <div className="right-triangle-lt bg-[#6E8798] w-[170px] lg:absolute lg:bottom-[10%] lg:right-[15%]">
+        <div className="relative">
+          <div className="text-white font-semibold absolute top-4 left-4">Teamwork</div>
+        </div>
+      </div>
     </section>
   )
 }
