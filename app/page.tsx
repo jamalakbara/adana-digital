@@ -1,6 +1,6 @@
 "use client"
 import MotionWrapper from "@/components/client/motion-wrapper";
-import { services } from "@/lib/data";
+import { brands, services } from "@/lib/data";
 import InViewWrapper from "@/components/client/in-view-wrapper";
 import { MoveDownArrow } from "@/components/client/move-down-arrow";
 import { LetsDiscussText } from "@/components/client/lets-discuss-text";
@@ -245,8 +245,18 @@ function SuccessStoryAndClientListSection() {
       <InViewWrapper>
         <div className="text-3xl text-[#527D38] text-center mx-5 underline underline-offset-8">We Collaborate Remarkably With Incredible Brands</div>
       </InViewWrapper>
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 align-middle justify-center">
-        <BrandsList />
+      <div className="flex flex-row">
+        <div className="w-0 lg:w-[50%] hidden lg:block pt-1 pl-20">
+          <p className="text-lg text-[#527D38] font-semibold mb-6">Incredible brands:</p>
+          <div className="grid grid-cols-2">
+            {brands.map((brand, i) => (
+              <p key={i+1} className="text-[#527D38] my-2">{brand.name}</p>
+            ))}
+          </div>
+        </div>
+        <div className="w-[100%] lg:w-[50%] flex flex-col lg:flex-row gap-8 lg:gap-0 align-middle justify-center px-2">
+          <BrandsList />
+        </div>
       </div>
     </section>
   )
