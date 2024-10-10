@@ -8,6 +8,16 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+		fontFamily: {
+      sans: ['Founders Grotesk', 'sans'],
+      serif: ['Antic Didone', 'serif'],
+    },
+    screens: {
+      sm:' 375px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
 		extend: {
 			backgroundImage: {
 				artboard1: "url('../public/assets/artboard-1.png')",
@@ -20,6 +30,9 @@ const config: Config = {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
+				'secondary-white': '#DDDDDD',
+        'soft-black': '#131313',
+        'soft-gray': '#898989',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
