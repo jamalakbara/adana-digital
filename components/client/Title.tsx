@@ -1,4 +1,4 @@
-const Title = ({text, className}) => {
+const Title = ({text, className}: {text:string, className: string}) => {
   return (
     <h1 
       className={`text-white font-serif 
