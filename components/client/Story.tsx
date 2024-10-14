@@ -3,7 +3,7 @@ import TextLink from './TextLink'
 import Span from './Span'
 import Title from './Title'
 
-const Story = ({storyRefs}) => {
+const Story = ({ storyRefs }: { storyRefs: React.MutableRefObject<null> }) => {
   const images = [
     {
       src: 'story1.png',
@@ -40,7 +40,7 @@ const Story = ({storyRefs}) => {
           data-aos='fade-right'
           data-aos-delay='250'
         >
-          <Title text='The Furniture which is actualfor years and even decades' />
+          <Title className='' text='The Furniture which is actualfor years and even decades' />
         </div>
 
         <div 
@@ -66,7 +66,7 @@ const Story = ({storyRefs}) => {
           data-aos='fade-right'
           data-aos-delay='450'
         >
-          <TextLink text='read more' />
+          <TextLink href='' text='read more' />
         </div>
       </div>
       

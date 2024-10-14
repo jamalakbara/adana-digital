@@ -58,7 +58,7 @@ const Missions = () => {
           data-aos='fade-left'
           data-aos-delay='250'
         >
-          <Title text='Why we do' />
+          <Title className='' text='Why we do' />
         </div>
 
         <div 

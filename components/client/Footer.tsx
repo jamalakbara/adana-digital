@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Logo from "./Logo"
 
-const Navlink = ({link, onClick}) => {
+const Navlink = ({ link, onClick }: { link: { label: string } , onClick: (link: any) => void }) => {
   return (
     <div
       className={`opacity-100 cursor-pointer text-secondary-white capitalize text-sm font-normal font-sans hover:opacity-100`} 
@@ -12,8 +12,8 @@ const Navlink = ({link, onClick}) => {
   )
 }
 
-const Footer = ({navigation_links}) => {
-  const handleClick = ({refs}) => {
+const Footer = ({ navigation_links }: { navigation_links: { label: string }[] }) => {
+  const handleClick = ({ refs }: { refs: any }) => {
     refs.current.scrollIntoView({ behavior: 'smooth' });
   }
 

@@ -5,8 +5,9 @@ import Title from "./Title"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
+import React from "react";
 
-const Products = ({productsRefs}) => {
+const Products = ({ productsRefs }: { productsRefs: React.MutableRefObject<null> }) => {
   const images = [
     {
       src: 'product1.png',
@@ -59,7 +60,7 @@ const Products = ({productsRefs}) => {
         <div
           data-aos='fade-right'
         >
-          <Span text='products' />
+          <Span className='' text='products' />
         </div>
         
         <div 
@@ -84,7 +85,7 @@ const Products = ({productsRefs}) => {
             data-aos='zoom-in-up'
             data-aos-delay='250'
           >
-            <TextLink text='explore more' />
+            <TextLink href='' text='explore more' />
           </div>
         </div>
       </div>

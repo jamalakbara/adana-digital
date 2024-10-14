@@ -1,4 +1,4 @@
-const Navlink = ({link, activeLink, onClick}) => {
+const Navlink = ({ link, activeLink, onClick }: { link: { label: string }, activeLink: string, onClick: (link: any) => void }) => {
   return (
     <div
       className={`cursor-pointer text-secondary-white capitalize font-light font-sans hover:opacity-100
@@ -12,7 +12,7 @@ const Navlink = ({link, activeLink, onClick}) => {
   )
 }
 
-const Hamburger = ({visibleModal, setVisibleModal}) => {
+const Hamburger = ({ visibleModal, setVisibleModal }: { visibleModal: boolean, setVisibleModal: (arg: boolean) => void }) => {
   const handleClick = () => {
     setVisibleModal(!visibleModal)
   }
@@ -25,8 +25,8 @@ const Hamburger = ({visibleModal, setVisibleModal}) => {
   )
 }
 
-const ModalLinks = ({navigation_links, activeLink, setActiveLink, visibleModal, setVisibleModal}) => {
-  const handleClick = ({label, refs}) => {
+const ModalLinks = ({ navigation_links, activeLink, setActiveLink, visibleModal, setVisibleModal }: { navigation_links: { label: string }[], activeLink: string, setActiveLink: (link: any) => void, visibleModal: boolean, setVisibleModal: (arg: boolean) => void }) => {
+  const handleClick = ({ label, refs }: { label: string, refs: any }) => {
     refs.current.scrollIntoView({ behavior: 'smooth' });
     setActiveLink(label)
     setVisibleModal(!visibleModal)

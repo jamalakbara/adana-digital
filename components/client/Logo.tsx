@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-const Logo = ({className}) => {
+const Logo = ({ className }: { className?: string }) => {
   return (
     <Link className={`${className?className:''}`} href="/">
       <figure>

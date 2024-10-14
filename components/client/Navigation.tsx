@@ -2,7 +2,7 @@ import { useState } from "react";
 import Logo from "./Logo";
 import ModalLinks from "./ModalLinks";
 
-const Navlink = ({link, activeLink, onClick}) => {
+const Navlink = ({ link, activeLink, onClick }: { link: { label: string }, activeLink: string, onClick: (link: any) => void }) => {
   return (
     <div
       className={`${link.label === activeLink ? 'opacity-100' : 'opacity-70'} cursor-pointer text-secondary-white capitalize text-sm font-normal font-sans hover:opacity-100`} 
@@ -13,7 +13,7 @@ const Navlink = ({link, activeLink, onClick}) => {
   )
 }
 
-const Hamburger = ({visibleModal, setVisibleModal}) => {
+const Hamburger = ({ visibleModal, setVisibleModal }: { visibleModal: boolean, setVisibleModal: (arg: boolean) => void }) => {
   const handleClick = () => {
     setVisibleModal(!visibleModal)
   }
@@ -27,10 +27,10 @@ const Hamburger = ({visibleModal, setVisibleModal}) => {
   )
 }
 
-const Navigation = ({navigation_links, activeLink, setActiveLink}) => {
+const Navigation = ({ navigation_links, activeLink, setActiveLink }: { navigation_links: { label: string }[], activeLink: string, setActiveLink: (link: any) => void }) => {
   const [visibleModal, setVisibleModal] = useState(false)
 
-  const handleClick = ({label, refs}) => {
+  const handleClick = ({ label, refs }: { label: string, refs: any }) => {
     refs.current.scrollIntoView({ behavior: 'smooth' });
     setActiveLink(label)
   }
