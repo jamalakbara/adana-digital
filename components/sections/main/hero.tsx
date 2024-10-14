@@ -3,7 +3,7 @@
 import React from 'react'
 import { MoveDown } from 'lucide-react'
 
-const Section = ({ ref }: { ref: React.MutableRefObject<null> }) => {
+const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
   return (
     <section 
       ref={ref}

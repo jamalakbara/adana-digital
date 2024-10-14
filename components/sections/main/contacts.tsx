@@ -3,7 +3,7 @@ import Paragraph from '@/components/client/Paragraph'
 import Title from '@/components/client/Title'
 import Link from 'next/link'
 
-const Section = ({ ref }: { ref: React.MutableRefObject<null> }) => {
+const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
   const navs = [
     { title: "Home", href: "#" },
     { title: "Expertise", href: "#" },

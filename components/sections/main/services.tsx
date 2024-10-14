@@ -9,42 +9,42 @@ import Link from 'next/link';
 
 import glodana from '@/public/assets/glodana-logo.svg'
 
-const Section = ({ ref }: { ref: React.MutableRefObject<null> }) => {
+const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
   const images = [
     {
       src: 'product1.png',
       width: 373,
       height: 278,
       title: 'Performance Marketing',
-      href: ''
+      href: '#performance-marketing',
     },
     {
       src: 'product1.png',
       width: 373,
       height: 278,
       title: 'Digital Media Buying',
-      href: ''
+      href: '#media-buying',
     },
     {
       src: 'product1.png',
       width: 373,
       height: 278,
       title: 'Marketplace Management',
-      href: ''
+      href: '#marketplace-management',
     },
     {
       src: 'product1.png',
       width: 373,
       height: 278,
       title: 'Digital Corporate Training',
-      href: ''
+      href: '#corporate-training',
     },
     {
       src: 'product1.png',
       width: 373,
       height: 278,
       title: 'Creative Solution',
-      href: ''
+      href: '/gladana',
     },
   ]
 

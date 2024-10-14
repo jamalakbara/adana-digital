@@ -5,7 +5,7 @@ import Image from "next/image"
 import Title from "../../client/Title"
 import Paragraph from '@/components/client/Paragraph'
 
-const Section = ({ ref }: { ref: React.MutableRefObject<null> }) => {
+const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
   const conceptImages = [
     {
       src: "concept1.png",

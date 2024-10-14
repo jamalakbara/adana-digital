@@ -34,10 +34,12 @@ const Page = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if ([heroRef.current, descriptionRef.current, servicesRef.current, toolsPartnersRef.current, brandsRef.current, contactsRef.current].includes(null)) return
+      if ([heroRef.current, descriptionRef.current, servicesRef.current, toolsPartnersRef.current, brandsRef.current, contactsRef.current].includes(null)) {
+        return
+      }
 
       const heroPosition = (heroRef.current as any).getBoundingClientRect().top;
-      const descriptionPosition = (descriptionRef.current as any).getBoundingClientRect().top;
+      // const descriptionPosition = (descriptionRef.current as any).getBoundingClientRect().top;
       const servicesPosition = (servicesRef.current as any).getBoundingClientRect().top;
       const toolsPartnersPosition = (toolsPartnersRef.current as any).getBoundingClientRect().top;
       const brandsPosition = (brandsRef.current as any).getBoundingClientRect().top;
@@ -46,9 +48,9 @@ const Page = () => {
       if (heroPosition <= 0) {
         setActiveLink('home');
       }
-      if (descriptionPosition <= 0) {
-        setActiveLink('description');
-      }
+      // if (descriptionPosition <= 0) {
+      //   setActiveLink('description');
+      // }
       if (servicesPosition <= 0) {
         setActiveLink('services');
       }
@@ -66,7 +68,7 @@ const Page = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [heroRef, descriptionRef]);
+  }, [heroRef]);
 
   const navigation_links = [
     {
@@ -74,19 +76,19 @@ const Page = () => {
       label: "home",
       ref: heroRef
     },
-    {
-      key: 2,
-      label: "description",
-      ref: descriptionRef
-    },
+    // {
+    //   key: 2,
+    //   label: "description",
+    //   ref: descriptionRef
+    // },
     {
       key: 3,
-      label: "services",
+      label: "expertise",
       ref: servicesRef
     },
     {
       key: 4,
-      label: "digital partners",
+      label: "digital-partners",
       ref: toolsPartnersRef
     },
     {
@@ -108,16 +110,36 @@ const Page = () => {
       </Head>
       <Navigation navigation_links={navigation_links} activeLink={activeLink} setActiveLink={setActiveLink} />
 
-      <Hero ref={heroRef} />
-      <Description ref={descriptionRef} />
-      <Services ref={servicesRef} />
-      <PerformanceMarketing />
-      <MarketplaceManagement />
-      <MediaBuying />
-      <CorporateTraining />
-      <ToolsPartners ref={toolsPartnersRef} />
-      <Brands ref={brandsRef} />
-      <Contacs ref={contactsRef} />
+      <div id='home' ref={heroRef}>
+        <Hero />
+      </div>
+      <div ref={descriptionRef}>
+        <Description />
+      </div>
+      <div id='expertise' ref={servicesRef}>
+        <Services />
+      </div>
+      <div id='performance-marketing'>
+        <PerformanceMarketing />
+      </div>
+      <div id='marketplace-management'>
+        <MarketplaceManagement />
+      </div>
+      <div id='media-buying'>
+        <MediaBuying />
+      </div>
+      <div id='corporate-training'>
+        <CorporateTraining />
+      </div>
+      <div id='digital-partners' ref={toolsPartnersRef}>
+        <ToolsPartners />
+      </div>
+      <div id='portfolio' ref={brandsRef}>
+        <Brands />
+      </div>
+      <div id='contacts' ref={contactsRef}>
+        <Contacs />
+      </div>
     </>
   )
 }

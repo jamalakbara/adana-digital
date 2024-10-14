@@ -1,6 +1,6 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Logo from "./Logo";
 import ModalLinks from "./ModalLinks";
 
@@ -10,7 +10,7 @@ const Navlink = ({ link, activeLink, onClick }: { link: { label: string }, activ
       className={`${link.label === activeLink ? 'opacity-100' : 'opacity-70'} cursor-pointer text-secondary-white capitalize text-sm font-normal font-sans hover:opacity-100`} 
       onClick={() => onClick(link)}
     >
-      {link.label}
+      {link.label.replace('-', ' ')}
     </div>
   )
 }
@@ -32,8 +32,8 @@ const Hamburger = ({ visibleModal, setVisibleModal }: { visibleModal: boolean, s
 const Navigation = ({ navigation_links, activeLink, setActiveLink }: { navigation_links: { label: string }[], activeLink: string, setActiveLink: (link: any) => void }) => {
   const [visibleModal, setVisibleModal] = useState(false)
 
-  const handleClick = ({ label, refs }: { label: string, refs: any }) => {
-    refs.current.scrollIntoView({ behavior: 'smooth' });
+  const handleClick = ({ label, ref }: { label: string, ref: any }) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
     setActiveLink(label)
   }
 
