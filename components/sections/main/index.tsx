@@ -33,6 +33,8 @@ const Page = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      if ([heroRef.current, descriptionRef.current, servicesRef.current, toolsPartnersRef.current, brandsRef.current, contactsRef.current].includes(null)) return
+
       const heroPosition = (heroRef.current as any).getBoundingClientRect().top;
       const descriptionPosition = (descriptionRef.current as any).getBoundingClientRect().top;
       const servicesPosition = (servicesRef.current as any).getBoundingClientRect().top;
