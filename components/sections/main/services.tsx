@@ -19,14 +19,14 @@ const Section = ({ ref }: { ref: React.MutableRefObject<null> }) => {
       href: ''
     },
     {
-      src: 'product2.png',
+      src: 'product1.png',
       width: 373,
       height: 278,
       title: 'Digital Media Buying',
       href: ''
     },
     {
-      src: 'product3.png',
+      src: 'product1.png',
       width: 373,
       height: 278,
       title: 'Marketplace Management',

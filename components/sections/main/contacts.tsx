@@ -97,7 +97,7 @@ const Section = ({ ref }: { ref: React.MutableRefObject<null> }) => {
         {/* NAVIGATIONS */}
         <div className='flex flex-row gap-4 flex-wrap w-[200px] justify-center'>
           {navs.map((nav, index) => (
-            <Link href={nav.href} className='text-white transition-all ease-in-out hover:opacity-70'>{nav.title}</Link>
+            <Link href={nav.href} className='text-white transition-all ease-in-out hover:opacity-70' key={index}>{nav.title}</Link>
           ))}
         </div>
 

@@ -13,7 +13,7 @@ const Navlink = ({link, onClick}) => {
 }
 
 const Footer = ({navigation_links}) => {
-  const handleClick = ({label, refs}) => {
+  const handleClick = ({refs}) => {
     refs.current.scrollIntoView({ behavior: 'smooth' });
   }
 

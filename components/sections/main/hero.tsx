@@ -13,7 +13,7 @@ const Section = ({ ref }: { ref: React.MutableRefObject<null> }) => {
         sm:px-[40px]
         md:px-20
         xl:px-[10%]' 
-      style={{backgroundImage: `url(/img/bg-hero.png)`}}
+      style={{backgroundImage: `url(https://placehold.co/1280x720/334E4D/FFF)`}}
     >
       <div 
         className='z-10 flex flex-col
