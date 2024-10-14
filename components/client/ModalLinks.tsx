@@ -1,3 +1,5 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 const Navlink = ({ link, activeLink, onClick }: { link: { label: string }, activeLink: string, onClick: (link: any) => void }) => {
   return (
     <div
