@@ -1,7 +1,7 @@
 'use client'
 
 import Title from '@/components/client/Title'
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";

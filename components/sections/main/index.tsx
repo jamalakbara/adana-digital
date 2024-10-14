@@ -39,7 +39,7 @@ const Page = () => {
       }
 
       const heroPosition = (heroRef.current as any).getBoundingClientRect().top;
-      const descriptionPosition = (descriptionRef.current as any).getBoundingClientRect().top;
+      // const descriptionPosition = (descriptionRef.current as any).getBoundingClientRect().top;
       const servicesPosition = (servicesRef.current as any).getBoundingClientRect().top;
       const toolsPartnersPosition = (toolsPartnersRef.current as any).getBoundingClientRect().top;
       const brandsPosition = (brandsRef.current as any).getBoundingClientRect().top;
@@ -68,7 +68,7 @@ const Page = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [heroRef, descriptionRef]);
+  }, [heroRef]);
 
   const navigation_links = [
     {
