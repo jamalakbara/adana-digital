@@ -16,7 +16,7 @@ import Image from 'next/image';
 
 // email marketing partner
 
-const Section = ({ ref }: { ref: React.MutableRefObject<null> }) => {
+const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
   const categories = [
     {
       title: "Agency Partner",
