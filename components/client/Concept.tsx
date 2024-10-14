@@ -3,7 +3,7 @@ import TextLink from "./TextLink"
 import Span from "./Span"
 import Title from "./Title"
 
-const Concept = ({conceptRefs}) => {
+const Concept = ({ conceptRefs }: { conceptRefs: React.MutableRefObject<null> }) => {
   const conceptImages = [
     {
       src: "concept1.png",
@@ -55,11 +55,11 @@ const Concept = ({conceptRefs}) => {
             data-aos-duration='2000'
             data-aos-easing='ease-out-cubic'
           >
-            <Span text='concept' />
+            <Span className='' text='concept' />
 
             <Title text='We are convinced that substantial design must not make any compromises in the quality of materials. That is why we only use slow growing, solid materials' className='leading-[60px]' />
 
-            <TextLink text='Read More' />
+            <TextLink href='' text='Read More' />
           </div>
         </div>
 

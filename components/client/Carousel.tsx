@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Span from './Span'
 
-const Carousel = ({carouselRefs}) => {
+const Carousel = ({ carouselRefs }: { carouselRefs: React.MutableRefObject<null> }) => {
   const carousels = [
     {
       background: "bg-hero.png",
@@ -25,7 +25,7 @@ const Carousel = ({carouselRefs}) => {
     },
   ]
 
-  const handleClick = (idx) => {
+  const handleClick = (idx: number) => {
     setIndex(idx)
   }
 
@@ -119,7 +119,7 @@ const Carousel = ({carouselRefs}) => {
           <div
             data-aos='fade-up'
           >
-            <Span text='scroll' />
+            <Span className='' text='scroll' />
           </div>
 
           {/* Button */}

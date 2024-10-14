@@ -33,12 +33,12 @@ const Page = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroPosition = heroRef.current.getBoundingClientRect().top;
-      const descriptionPosition = descriptionRef.current.getBoundingClientRect().top;
-      const servicesPosition = servicesRef.current.getBoundingClientRect().top;
-      const toolsPartnersPosition = toolsPartnersRef.current.getBoundingClientRect().top;
-      const brandsPosition = brandsRef.current.getBoundingClientRect().top;
-      const contactsPosition = contactsRef.current.getBoundingClientRect().top;
+      const heroPosition = (heroRef.current as any).getBoundingClientRect().top;
+      const descriptionPosition = (descriptionRef.current as any).getBoundingClientRect().top;
+      const servicesPosition = (servicesRef.current as any).getBoundingClientRect().top;
+      const toolsPartnersPosition = (toolsPartnersRef.current as any).getBoundingClientRect().top;
+      const brandsPosition = (brandsRef.current as any).getBoundingClientRect().top;
+      const contactsPosition = (contactsRef.current as any).getBoundingClientRect().top;
       
       if (heroPosition <= 0) {
         setActiveLink('home');
