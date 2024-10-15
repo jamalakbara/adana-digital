@@ -80,7 +80,9 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
           <div
             data-aos='zoom-in-up'
             data-aos-delay='250'
+            className='text-white text-2xl'
           >
+            Our Services
           </div>
         </div>
       </div>
@@ -132,7 +134,7 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
                 href={image.href}
                 className='transition-all ease-in-out hover:opacity-70'
               >
-                <h1 className='text-white text-2xl mb-4' style={{ visibility: idx === images.length-1 ? 'visible' : 'hidden' }}>Our Services</h1>
+                {/* <h1 className='text-white text-2xl mb-4' style={{ visibility: idx === images.length-1 ? 'visible' : 'hidden' }}>Our Services</h1> */}
                 <div 
                   className={`max-w-[${image.width}px]`}
                 >
