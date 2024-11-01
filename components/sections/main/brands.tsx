@@ -5,7 +5,7 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
   return (
     <section 
       ref={ref}
-      className='h-screen bg-white flex flex-row'
+      className='h-screen bg-white flex flex-row py-[100px]'
     >
       <div className='w-[50vw] px-20'>
         <p className="text-lg text-[#527D38] font-semibold mb-6">Incredible brands:</p>

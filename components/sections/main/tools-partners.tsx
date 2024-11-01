@@ -5,6 +5,9 @@ import logo_plabs from "@/public/assets/logo-plabs.png";
 import logo_glos from "@/public/assets/logo-glos.png";
 import logo_amok from "@/public/assets/logo-amok.png";
 import Image from 'next/image';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import Title from '@/components/client/Title';
 
 // social platform
 
@@ -43,6 +46,44 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
       items: [logo_amok],
     },
   ];
+
+  return (
+    <section 
+      ref={ref}
+      className='h-screen bg-[#EEFF01] flex flex-col align-middle justify-center'
+    >
+      <Title text='Our Digital Tools and Media Partners' className='text-center text-green-700 font-semibold pt-10' />
+      <Carousel
+        opts={{
+          align: 'center',
+        }}
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
+        orientation='vertical'
+        className='w-screen h-[60vh] mt-[10%]'
+      >
+        <CarouselContent className='h-[400px]'>
+          {categories.map((cat, i) => (
+            <CarouselItem key={`${i+1}`} className='md:basis-1/3'>
+              <div className='flex flex-col items-center justify-center'>
+                <h3 className="underline underline-offset-8 text-[#527D38] my-6 text-center">{cat.title}</h3>
+                <div className="flex flex-row gap-2 flex-wrap justify-center">
+                {cat.items.map((item, j) => (
+                  <div key={`${i}.${j}`} className="">
+                    <Image src={item} alt="" width={150} />
+                  </div>
+                ))}
+              </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+    </section>
+  )
 
   return (
     <section 
