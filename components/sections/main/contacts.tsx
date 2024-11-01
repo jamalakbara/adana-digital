@@ -15,7 +15,7 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
   return (
     <section 
       ref={ref}
-      className='h-screen bg-soft-black flex flex-col'
+      className='h-screen bg-white flex flex-col'
     >
       <div className='flex flex-col grow justify-center'>
         <div 
@@ -37,7 +37,7 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
               <Paragraph
                 className='leading-[44px] max-w-2xl text-lg
                 sm:mt-[14px] 
-                lg:mb-0' 
+                lg:mb-0 text-black' 
               >
                 Let&apos;s create a measurable impact toward your business
               </Paragraph>
@@ -70,7 +70,7 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
                 text='Start Your Journey Now' 
                 className='leading-[44px] max-w-2xl underline underline-offset-8 text-3xl
                 sm:mt-[14px] 
-                lg:mb-0' 
+                lg:mb-0 text-black' 
               />
             </div>
 

@@ -50,9 +50,9 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
   return (
     <section 
       ref={ref}
-      className='h-screen bg-[#EEFF01] flex flex-col align-middle justify-center'
+      className='h-screen bg-white flex flex-col align-middle justify-center'
     >
-      <Title text='Our Digital Tools and Media Partners' className='text-center text-green-700 font-semibold pt-10' />
+      <Title text='Our Digital Tools and Media Partners' className='text-center text-black font-semibold pt-10' />
       <Carousel
         opts={{
           align: 'center',
