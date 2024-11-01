@@ -42,7 +42,7 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
   return (
     <section 
       ref={ref} 
-      className='h-screen bg-soft-black overflow-hidden
+      className='h-screen bg-white overflow-hidden
       sm:px-[40px]
       md:px-20
       xl:px-[10%]'
@@ -58,7 +58,7 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
             data-aos-easing='ease-out-cubic'
           >
             <Title text='Why Adana' className='leading-[60px]' />
-            <Paragraph className='w-[800px] mx-auto'>
+            <Paragraph className='text-black w-[800px] mx-auto'>
               <span className='text-green-500'>Adana Digital</span> focus to craft performance marketing strategy and digital media to achieve <span className='text-green-500'>measurable impact</span> in order to <span className='text-green-500'>accelerate business growth</span>
             </Paragraph>
             <Paragraph className='w-[800px] mx-auto'>

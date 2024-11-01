@@ -51,7 +51,7 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
   return (
     <section 
       ref={ref} 
-      className='h-screen bg-soft-black flex flex-col justify-center'
+      className='h-screen bg-white flex flex-col justify-center'
     >
       <div 
         className="
@@ -73,14 +73,14 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
               text='Evolving Together to utilize Innovative Digital Solutions to Develop Your Brand.' 
               className='leading-[44px] max-w-2xl
               sm:mt-[14px] 
-              lg:mb-0' 
+              lg:mb-0 text-black' 
             />
           </div>
 
           <div
             data-aos='zoom-in-up'
             data-aos-delay='250'
-            className='text-white text-2xl'
+            className='text-black text-2xl'
           >
             Our Services
           </div>
@@ -158,7 +158,7 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
                     md:gap-[23px]"
                   >
                     {/* Number */}
-                    <p className="text-white font-sans font-light
+                    <p className="text-black font-sans font-light
                     mt-1
                     sm:text-sm 
                     md:text-base">
@@ -169,7 +169,7 @@ const Section = ({ ref }: { ref?: React.MutableRefObject<null> }) => {
                     <div>
                       {/* Title */}
                       <h1 
-                        className="text-white font-sans font-normal
+                        className="text-black font-sans font-normal
                         sm:text-xl
                         md:text-2xl"
                       >

@@ -18,7 +18,7 @@ const Section = () => {
 
   return (
     <section 
-      className="h-screen bg-soft-black flex items-center overflow-hidden
+      className="h-screen bg-white flex items-center overflow-hidden
       px-[131px] 
       sm:px-[40px] sm:flex-col
       md:px-20
@@ -52,7 +52,7 @@ const Section = () => {
           data-aos='fade-left'
           data-aos-delay='250'
         >
-          <Title className='' text='Digital Media Buying' />
+          <Title className='text-black' text='Digital Media Buying' />
         </div>
 
         <div 
@@ -66,7 +66,7 @@ const Section = () => {
             data-aos-delay='350'
           >
             <p 
-              className='last:mb-0 text-white text-lg
+              className='last:mb-0 text-black text-lg
               mb-[30px]
               sm:mb-3
               md:mb-[30px]'
