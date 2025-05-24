@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap'); */
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/fonts/Founders_Grotesk/FoundersGrotesk-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/fonts/Founders_Grotesk/FoundersGrotesk-Bold.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/fonts/Founders_Grotesk/FoundersGrotesk-Light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Antic Didone';
+  src: url('/fonts/Antic_Didone/AnticDidone-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #131313;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #131313;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #131313;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.carousel::before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(359.66deg, #131313 8.89%, rgba(0, 0, 0, 0.1) 112.05%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
